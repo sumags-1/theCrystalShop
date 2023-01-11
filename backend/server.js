@@ -10,7 +10,9 @@ require("dotenv").config()
 // access models
 const db = require("./models")
 // access controllers
-
+const userCtrl = require("./controllers/users")
+const crystalCtrl = require("./controllers/crystals")
+// const reviewCtrl = require("./controllers/reviews")
 
 
 // +-+-+-+-+-+-+-+-+-+-+
@@ -25,6 +27,9 @@ app.use(express.json())
 app.use(passport.initialize())
 
 // Use controllers for all other routes
+// app.use('/crystal', crystalCtrl)
+// app.use('/user', userCtrl)
+// app.use('/review', reviewCtrl);
 
 // +-+-+-+-+-+-+-+-+
 // |L|I|S|T|E|N|E|R|

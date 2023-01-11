@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const reviewSchema = require("./review");
 const Schema = mongoose.Schema;
 
-const trailSchema = new Schema(
+const crystalSchema = new Schema(
     {
         name: { type: String, required: true },
         origin: { type: String},
@@ -16,15 +16,11 @@ const trailSchema = new Schema(
         chakra: { type: String, enum: ['root', 'sacral', 'solar plexus', 'heart', 'throat', 'third eye', 'crown'], required: true},
         zodiac: { type: String, enum: ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'], required: true },
         element: {type: String, enum: ['fire', 'earth', 'air', 'water']},
-        image: { type: String, default: '/assets/hikers_hub_logo.png' },
+        image: { type: String, default: '/assets/nb_logo.png' },
         reviews: [reviewSchema]
     }
 )
 
-const Trail = mongoose.model("Trail", trailSchema);
+const Crystal = mongoose.model("Crystal", crystalSchema);
 
-module.exports = Trail
-
-name, image, origin, size, shape, surface (polished, raw), 
-category(jewelry, raw, polished), intentions, chakra, zodiac, element, 
-review_id (linked from reviews)
+module.exports = Crystal
