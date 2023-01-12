@@ -5,7 +5,6 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const passport = require('./config/passport')()
 require("dotenv").config()
 // access models
 const db = require("./models")
@@ -24,7 +23,6 @@ app.use(cors())
 // body parser: used for POST/PUT/PATCH routes: this will take incoming strings from the request body that are url encoded and parse them into an object that can be accessed in the request parameter as a property called body (req.body).
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
-app.use(passport.initialize())
 
 // Use controllers for all other routes
 // app.use('/crystal', crystalCtrl)
