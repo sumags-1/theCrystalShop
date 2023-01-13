@@ -17,18 +17,18 @@ const User = db.User
 // +-+-+-+-+-+-+	
 
 //Use these simple routes ONLY if you are not yet setup with jwt-simple
-// // Create User 
-// router.post('/', (req, res) => {
-// 	db.User.create(req.body, (err, user) => {
-// 		res.json(user);
-// 	});
-// });
+// Create User 
+router.post('/', (req, res) => {
+	db.User.create(req.body, (err, user) => {
+		res.json(user);
+	});
+});
 
-// // Show Route
-// router.get('/:id', async (req, res) => {
-// 	const user = await db.User.findById(req.params.id);
-// 	res.json(user);
-// });
+// Show Route
+router.get('/:id', async (req, res) => {
+	const user = await db.User.findById(req.params.id);
+	res.json(user);
+});
 
 
 
@@ -98,20 +98,20 @@ router.post('/login', async (req, res) => {
 })
 
 
-// GET USER DATA (if user is logged in)
-router.get('/', async (req, res) => {
-	const token = req.headers.authorization
-    const decode = jwt.decode(token, config.jwtSecret)
-	const foundUser = await db.User.findById(decode.id)
-	// console.log(decode.id)
-	res.json(foundUser)
-	// const foundUser = await User.findById(req.params.id)
-	// if (foundUser) {
-	// 	res.json(foundUser)
-	// } else {
-	// 	res.sendStatus(404)
-	// }
-})
+// // GET USER DATA (if user is logged in)
+// router.get('/', async (req, res) => {
+// 	const token = req.headers.authorization
+//     const decode = jwt.decode(token, config.jwtSecret)
+// 	const foundUser = await db.User.findById(decode.id)
+// 	// console.log(decode.id)
+// 	res.json(foundUser)
+// 	// const foundUser = await User.findById(req.params.id)
+// 	// if (foundUser) {
+// 	// 	res.json(foundUser)
+// 	// } else {
+// 	// 	res.sendStatus(404)
+// 	// }
+// })
 
 
 module.exports = router; 

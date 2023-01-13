@@ -6,16 +6,16 @@ const Schema = mongoose.Schema;
 const crystalSchema = new Schema(
     {
         name: { type: String, required: true },
-        origin: { type: String},
+        origin: { type: String },
         size: { type: String, required: true },
         shape: { type: String, required: true },
         description: { type: String },
-        surface: { type: String, enum:['polished', 'raw', 'jewelry']},
-        jewelry_category: { type: String, enum: ['bracelet', 'earring', 'pendant'] },
+        surface: { type: String, enum: ['Polished', 'Raw', 'Jewelry'] },
+        jewelry_category: { type: String, enum: ['Bracelet', 'Earrings', 'Pendant', 'None'] },
         intentions: { type: String },
-        chakra: { type: String, enum: ['root', 'sacral', 'solar plexus', 'heart', 'throat', 'third eye', 'crown'], required: true},
-        zodiac: { type: String, enum: ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'], required: true },
-        element: {type: String, enum: ['fire', 'earth', 'air', 'water']},
+        chakra: { type: String, enum: ['Root', 'Sacral', 'Solar Plexus', 'Heart', 'Throat', 'Third eye', 'Crown'], required: true },
+        zodiac: { type: String, enum: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'], required: true },
+        element: { type: String, enum: ['Fire', 'Earth', 'Air', 'Water'] },
         image: { type: String, default: '/assets/nb_logo.png' },
         reviews: [reviewSchema]
     }

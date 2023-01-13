@@ -20,22 +20,22 @@ const config = require('../config/config')
 // 	}
 // }
 
-// Index Route (SHOW ALL Reviews for ALL crystals and ALL users): 
-router.get('/', (req, res) => {
-	db.Crystal.find(
-		{},
-		{ reviews: true, _id: false },
-		(err, crystals) => {
-			// format query results to appear in one array, 
-			// rather than an array of objects containing arrays 
-			const flatList = []
-			for (let crystal of crystals) {
-				flatList.push(...crystal.reviews)
-			}
-			res.json(flatList)
-		}
-	)
-});
+// // Index Route (SHOW ALL Reviews for ALL crystals and ALL users): 
+// router.get('/', (req, res) => {
+// 	db.Crystal.find(
+// 		{},
+// 		{ reviews: true, _id: false },
+// 		(err, crystals) => {
+// 			// format query results to appear in one array, 
+// 			// rather than an array of objects containing arrays 
+// 			const flatList = []
+// 			for (let crystal of crystals) {
+// 				flatList.push(...crystal.reviews)
+// 			}
+// 			res.json(flatList)
+// 		}
+// 	)
+// });
 
 
 // Index Route (All Reviews by a specified crystal):
