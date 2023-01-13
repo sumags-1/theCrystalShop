@@ -31,10 +31,8 @@ const User = db.User
 // });
 
 
-
-
 // SIGN UP ROUTE (create user)
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
 	// verify the request body has an email and password
 	if (req.body.username && req.body.password) {
 		// make a newUser object with the request body and password
@@ -76,26 +74,26 @@ router.post('/', (req, res) => {
 })
 
 
-// // LOG IN ROUTE (find existing user)
-// router.post('/', async (req, res) => {
-// 	// attempt to find the user by their email in the database
-// 	const foundUser = await User.findOne({ username: req.body.username })
-// 	// check to:
-// 	// 1. make sure the user was found in the database
-// 	// 2. make sure the user entered in the correct password
-// 	if (foundUser && foundUser.password === req.body.password) {
-// 		// if the above applies, send the JWT to the browser
-// 		const payload = { id: foundUser.id }
-// 		const token = jwt.encode(payload, config.jwtSecret)
-// 		res.json({
-// 			token: token,
-// 			user: foundUser
-// 		})
-// 		// if the user was not found in the database OR their password was incorrect, send an error
-// 	} else {
-// 		res.sendStatus(401)
-// 	}
-// })
+// LOG IN ROUTE (find existing user)
+router.post('/login', async (req, res) => {
+	// attempt to find the user by their email in the database
+	const foundUser = await User.findOne({ username: req.body.username })
+	// check to:
+	// 1. make sure the user was found in the database
+	// 2. make sure the user entered in the correct password
+	if (foundUser && foundUser.password === req.body.password) {
+		// if the above applies, send the JWT to the browser
+		const payload = { id: foundUser.id }
+		const token = jwt.encode(payload, config.jwtSecret)
+		res.json({
+			token: token,
+			user: foundUser
+		})
+		// if the user was not found in the database OR their password was incorrect, send an error
+	} else {
+		res.sendStatus(401)
+	}
+})
 
 
 // GET USER DATA (if user is logged in)
@@ -103,14 +101,8 @@ router.get('/', async (req, res) => {
 	const token = req.headers.authorization
 	const decode = jwt.decode(token, config.jwtSecret)
 	const foundUser = await db.User.findById(decode.id)
-	// console.log(decode.id)
+	console.log(foundUser)
 	res.json(foundUser)
-	// const foundUser = await User.findById(req.params.id)
-	// if (foundUser) {
-	// 	res.json(foundUser)
-	// } else {
-	// 	res.sendStatus(404)
-	// }
 })
 
 

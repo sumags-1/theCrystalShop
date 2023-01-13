@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createUser } from '../../utils/api';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUp(props) {
     const [formData, setFormData] = useState({ username: '', password: '' })
+    const navigate = useNavigate()
 
     function handleChange(e) {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -16,6 +18,14 @@ export default function SignUp(props) {
                 props.setLogInStatus(true)
             })
     }
+
+ // redirect to home page if logged in
+ useEffect(() => {
+    if (props.isLoggedIn) {
+      navigate('/crystal')
+    }
+  }, [props.isLoggedIn])
+
 
     return (
         <form>

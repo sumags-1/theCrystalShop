@@ -12,13 +12,16 @@ export async function loginToAccount(formData) {
     return data
 }
 
-// create a post
-export async function createPost(formData) {
-    const config = {
-        headers: {
-            'Authorization': localStorage.getItem('token')
-        }
-    }
-    const { data } = await axios.post('post', formData, config)
-    return data
-}
+// // get user
+
+// export async function getUserName() {
+//     const config = {
+//         headers:{
+//             'Authorization': localStorage.getItem('token')
+//         }
+//     }
+//     const userD = await axios.get("http://localhost:5001/user", config)
+//     // console.log(userD.data)
+//     return userD.data
+// }
+

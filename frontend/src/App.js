@@ -20,6 +20,8 @@ function App() {
   const [crystals, setCrystals] = useState([]);
   const [isLoggedIn, setLogInStatus] = useState(false)
 
+
+
   useEffect(() => {
     if (localStorage.token) {
       setLogInStatus(true)
@@ -29,28 +31,43 @@ function App() {
   useEffect(() => {
     async function getIndexRoute() {
       const crystalData = await axios.get("http://localhost:5001/crystal")
-      console.log(crystalData.data)
+      // console.log(crystalData.data)
       setCrystals(crystalData.data)
     }
     getIndexRoute()
   }, [])
 
+  function logout(){
+    setLogInStatus(false)
+    localStorage.clear()
+  }
+
 
   return (
     <div className="App">
 
-      <Nav isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />
+      <Nav isLoggedIn={isLoggedIn} logout={logout}/>
 
       <Routes>
 
         <Route
           path='/crystal'
-          element={<CrystalHome crystals={crystals} isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />}
+          element={<CrystalHome crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
           path='/'
           element={<Home isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />}
+        />
+
+        <Route
+          path='/user/login'
+          element={<Login isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />}
+        />
+
+        <Route
+          path='/user/signup'
+          element={<SignUp isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />}
         />
       </Routes>
 

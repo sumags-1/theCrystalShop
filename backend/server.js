@@ -27,7 +27,7 @@ app.use(express.json())
 
 // Use controllers for all other routes
 app.use('/crystal', crystalCtrl)
-// app.use('/user', userCtrl)
+app.use('/user', userCtrl)
 // app.use('/review', reviewCtrl);
 
 // +-+-+-+-+-+-+-+-+

@@ -1,6 +1,6 @@
 
 export default function CrystalHome({ crystals }) {
-    console.log(crystals);
+    // console.log(crystals);
 
     return (
         <div>
