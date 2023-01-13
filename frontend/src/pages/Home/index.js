@@ -1,31 +1,38 @@
+// packages
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+// components
+import Login from "../../components/Login";
+import SignUp from "../../components/SignUp";
 
-export default function Home({ crystals }) {
-    console.log(crystals);
+export default function Home(props) {
+    const [form, setForm] = useState('login')
 
+    const navigate = useNavigate()
+
+    // redirect to feed page if logged in
+    useEffect(() => {
+        if (props.isLoggedIn) {
+            navigate('/crystal')
+        }
+    }, [props.isLoggedIn])
+
+    // render JSX
     return (
-        <div>
-            <h1>Welcome to New Beginnings, your one stop Crystal Shop</h1>
-            <div>
-                {crystals && crystals.map((crystal, i) => {
-                    return (
-                        <div key={i}>
-                            {/* <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                                <img class="w-full" src="/assets/black_tourmaline.jpeg" alt="Crystals"></img>
-                                    <div class="px-6 py-4">
-                                        <div class="font-bold text-xl mb-2">{crystal.name}</div>
-                                        <p class="text-gray-700 text-base">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                                        </p>
-                                    </div></div> */}
+        <main>
+            <button onClick={() => setForm('login')}>
+                Log In
+            </button>
 
-                            {crystal.name}
-                        </div>
-                    )
+            <button onClick={() => setForm('signup')}>
+                Sign Up
+            </button>
 
-                })}
-            </div>
+            <br />
+            <br />
 
-        </div>
+            {form === 'login' && <Login setLogInStatus={props.setLogInStatus} />}
+            {form === 'signup' && <SignUp setLogInStatus={props.setLogInStatus} />}
+        </main>
     )
 }
-
