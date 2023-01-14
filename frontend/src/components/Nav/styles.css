@@ -13,6 +13,7 @@
   }
   nav .nav-item:nth-of-type(2) a {
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
     justify-content: center;
     text-decoration: none;
@@ -22,7 +23,18 @@
     margin-left: -5px;
     height: 40px;
   }
-  
+
+  .logo {
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    display: inline-block;
+    border: none;
+    position: absolute;
+    top: 0.2em;
+    left: 0.5em;
+}
+
   @media only screen and (max-device-width: 600px) {
     nav {
       padding: 0.5em;

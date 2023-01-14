@@ -14,6 +14,8 @@ export default function SignUp(props) {
         e.preventDefault()
         createUser(formData)
             .then((data) => {
+                localStorage.username = data.user.username
+                localStorage.admin = data.user.admin
                 localStorage.token = data.token
                 props.setLogInStatus(true)
             })

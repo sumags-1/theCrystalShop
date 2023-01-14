@@ -1,6 +1,7 @@
 // DEPENDENCIES
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 // PAGES
@@ -17,6 +18,7 @@ import './App.css';
 
 function App() {
 
+  const navigate = useNavigate()
   const [crystals, setCrystals] = useState([]);
   const [isLoggedIn, setLogInStatus] = useState(false)
 
@@ -40,6 +42,7 @@ function App() {
   function logout(){
     setLogInStatus(false)
     localStorage.clear()
+    navigate('/')
   }
 
 

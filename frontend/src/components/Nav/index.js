@@ -9,7 +9,7 @@ import './styles.css'
 export default function Nav(props) {
     // state declaration: build JSX array of NavBar items
     const initialState = [
-        <div className='nav-item' key='1'>Crystal Shop Logo</div>,
+        <div className='nav-item' key='1'><img src="/assets/new-beginnings-logo.png" className="logo" alt="logo"></img></div>,
 
         <div className='nav-item' key='2'>
             <Link to='/'>
@@ -23,12 +23,22 @@ export default function Nav(props) {
     // add NavBar items to JSX array depending on App login state
     useEffect(() => {
         if (props.isLoggedIn) {
+            if (localStorage.admin == 'yes'){
+                setNavItems(initialState.concat(
+                    <div className="nav-item menu-display" key='3'>
+                        <div><p>for Admin ONLY</p></div>
+                        <div><p>Logged in as {localStorage.username}</p></div>
+                          <div>
+                        <button onClick={() => { props.logout() }}>Log Out</button></div>
+                    </div>
+                ))
+            } else {
             setNavItems(initialState.concat(
-                <div className="nav-item" key='3'>
-                     <p>Logged in as {localStorage.username}</p> 
-                    <button onClick={() => { props.logout() }}>Log Out</button>
+                <div className="nav-item menu-display" key='3'>
+                    <div><p>Logged in as {localStorage.username}</p></div>
+                    <div><button onClick={() => { props.logout() }}>Log Out</button></div>
                 </div>
-            ))
+            ))}
         } else {
             setNavItems(initialState.concat([
                 <div className="nav-item" key='3'>
