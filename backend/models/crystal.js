@@ -14,8 +14,9 @@ const crystalSchema = new Schema(
         jewelry_category: { type: String, enum: ['Bracelet', 'Earrings', 'Pendant', 'None'] },
         intentions: { type: String },
         chakra: { type: String, enum: ['Root', 'Sacral', 'Solar Plexus', 'Heart', 'Throat', 'Third eye', 'Crown'], required: true },
-        zodiac: { type: String, enum: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'], required: true },
+        zodiac: { type: String, enum: ['All signs', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'] },
         element: { type: String, enum: ['Fire', 'Earth', 'Air', 'Water'] },
+        price: {type: String},
         image: { type: String, default: '/assets/nb_logo.png' },
         reviews: [reviewSchema]
     }

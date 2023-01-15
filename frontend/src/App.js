@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 // PAGES
-import CrystalHome from './pages/CrystalHome';
+import CrystalHome from './pages/CrystalHome'
 import Home from './pages/Home'
 import AddCrystal from './pages/AddCrystal'
 import EditCrystal from './pages/EditCrystal'
