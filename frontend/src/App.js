@@ -7,6 +7,9 @@ import axios from 'axios';
 // PAGES
 import CrystalHome from './pages/CrystalHome';
 import Home from './pages/Home'
+import AddCrystal from './pages/AddCrystal'
+import EditCrystal from './pages/EditCrystal'
+import ShowCrystal from './pages/ShowCrystal'
 
 //COMPONENTS
 import Login from './components/Login';
@@ -39,7 +42,7 @@ function App() {
     getIndexRoute()
   }, [])
 
-  function logout(){
+  function logout() {
     setLogInStatus(false)
     localStorage.clear()
     navigate('/')
@@ -49,7 +52,7 @@ function App() {
   return (
     <div className="App">
 
-      <Nav isLoggedIn={isLoggedIn} logout={logout}/>
+      <Nav isLoggedIn={isLoggedIn} logout={logout} />
 
       <Routes>
 
@@ -72,6 +75,22 @@ function App() {
           path='/user/signup'
           element={<SignUp isLoggedIn={isLoggedIn} setLogInStatus={setLogInStatus} />}
         />
+
+        <Route
+          path='/crystal/addcrystal'
+          element={<AddCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+        />
+
+        <Route
+          path='/crystal/showcrystal'
+          element={<ShowCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+        />
+
+        <Route
+          path='/crystal/editcrystal'
+          element={<EditCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+        />
+
       </Routes>
 
     </div>

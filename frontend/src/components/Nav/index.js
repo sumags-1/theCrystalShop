@@ -18,27 +18,28 @@ export default function Nav(props) {
         </div>
     ]
     const [navItems, setNavItems] = useState(initialState)
-   
-    
+
+
     // add NavBar items to JSX array depending on App login state
     useEffect(() => {
         if (props.isLoggedIn) {
-            if (localStorage.admin == 'yes'){
+            if (localStorage.admin == 'yes') {
                 setNavItems(initialState.concat(
+
                     <div className="nav-item menu-display" key='3'>
-                        <div><p>for Admin ONLY</p></div>
-                        <div><p>Logged in as {localStorage.username}</p></div>
-                          <div>
-                        <button onClick={() => { props.logout() }}>Log Out</button></div>
+                        for Admin ONLY</div>,
+                    <div className="nav-item menu-display" key='4'><p>Logged in as {localStorage.username}</p>
+                        <button onClick={() => { props.logout() }}>Log Out</button>
                     </div>
                 ))
             } else {
-            setNavItems(initialState.concat(
-                <div className="nav-item menu-display" key='3'>
-                    <div><p>Logged in as {localStorage.username}</p></div>
-                    <div><button onClick={() => { props.logout() }}>Log Out</button></div>
-                </div>
-            ))}
+                setNavItems(initialState.concat(
+                    <div className="nav-item menu-display" key='3'>
+                        <p>Logged in as {localStorage.username}</p>
+                        <button onClick={() => { props.logout() }}>Log Out</button></div>
+
+                ))
+            }
         } else {
             setNavItems(initialState.concat([
                 <div className="nav-item" key='3'>
