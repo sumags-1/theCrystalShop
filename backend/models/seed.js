@@ -2,21 +2,6 @@ const db = require("./")
 
 const initial_crystals = [
     {
-        name: '',
-        origin: '',
-        size: '',
-        shape: '',
-        description: '',
-        surface: '',
-        jewelry_category: '',
-        intentions: '',
-        chakra: '',
-        zodiac: '',
-        element: '',
-        price: '',
-        image: ''
-    },
-    {
         name: 'Abundance bracelet with Green Aventurine and Jasper',
         origin: '',
         size: 'One size fits ~6" to 7.5"',
@@ -25,9 +10,9 @@ const initial_crystals = [
         surface: 'Polished',
         jewelry_category: 'Bracelet',
         intentions: 'Abundance',
-        chakra: 'Heart, Root',
-        zodiac: '',
-        element: 'Earth, Water',
+        chakra: 'Root',
+        zodiac: 'All signs',
+        element: 'Earth',
         price: '$12.50',
         image: './assets/abundance-bracelet-jasper-aventurine.jpeg'
     },
@@ -40,9 +25,9 @@ const initial_crystals = [
         surface: 'Polished',
         jewelry_category: 'Bracelet',
         intentions: 'Courage, Strength, Personal power',
-        chakra: 'Solar Plexus, Sacral',
-        zodiac: 'Gemini, Leo',
-        element: 'Earth, Fire',
+        chakra: 'Solar Plexus',
+        zodiac: 'Leo',
+        element: 'Fire',
         price: '$20',
         image: './assets/tigers-eye-bracelet.jpeg'
     },
@@ -53,7 +38,7 @@ const initial_crystals = [
         shape: 'Bracelet with round 6mm beads',
         description: 'Clear Quartz is the most versatile and universal crystal. It is a master healer and can help with almost any emotional or spiritual issue. Clear Quartz helps to cleanse and clear your mind and any negative energy or emotion you might be experiencing. It can be used to help amplify the energy of other stones, and is easily programmable. Clear Quartz cleanses, resonates with, and activates all of the Chakras. It is thought to help balance you, and enhances energy flow. Clear Quartz can be used to purify and cleanse spiritually, mentally, and physically. Because of its purifying energy, Clear Quartz is an extremely protective stone.',
         surface: 'Polished',
-        jewelry_category: '',
+        jewelry_category: 'Bracelet',
         intentions: 'Activation, Energizing, Focus',
         chakra: 'Crown',
         zodiac: 'All signs',
@@ -85,9 +70,9 @@ const initial_crystals = [
         surface: 'Polished',
         jewelry_category: 'Bracelet',
         intentions: 'Stress Relief, Calming, Love, Intuition',
-        chakra: 'Crown, Third Eye',
-        zodiac: 'Aquarius, Pisces',
-        element: 'Water, Air',
+        chakra: 'Crown',
+        zodiac: 'Pisces',
+        element: 'Air',
         price: '$26',
         image: './assets/amethyst-bracelet.jpeg'
     },
@@ -100,7 +85,7 @@ const initial_crystals = [
         surface: 'Polished',
         jewelry_category: 'Bracelet',
         intentions: 'Love, Strength',
-        chakra: 'Heart, Root',
+        chakra: 'Heart',
         zodiac: 'All signs',
         element: 'Earth',
         price: '$23',
@@ -118,7 +103,7 @@ const initial_crystals = [
         chakra: 'Crown',
         zodiac: 'All signs',
         element: 'Water',
-        price: '$2'
+        price: '$2',
         image: './assets/clear-quartz-tumbled-stone.jpeg'
     },
     {
@@ -129,11 +114,87 @@ const initial_crystals = [
         description: 'Need some extra protection in your life? Black Obsidian Tumbled Stones are perfect for that and are here to help! These polished tumbled stones are powerful cleansers of negativity, removing it from your environment, emotions, and mind. Black Obsidian Tumbled Stones also balance the Root Chakra, which helps ground you both spiritually and mentally. Price is for one (1) Tumbled Black Obsidian.',
         surface: 'Polished',
         jewelry_category: 'None',
-        intentions: 'Activation, Energizing, Focus',
+        intentions: 'Protection, Grounding',
         chakra: 'Root',
         zodiac: 'Sagittarius',
         element: 'Earth',
-        price: '$1.5'
+        price: '$1.5',
         image: './assets/black-obsidian-tumbled-stone.jpeg'
     },
+    {
+        name: 'Citrine Tumbled Stones',
+        origin: 'Mexico',
+        size: '0.5" to 3.5" - varying sizes available',
+        shape: 'Natural tumbled stone',
+        description: 'Achieve your goals and bring your intentions to life with the help of the most powerfl gemstone for manifestation, a Natural Citrine Tumbled Stone. These polished tumbled stones are gemstonesof light, happiness, and abundance. They help bring and maintain prosperity and remove negative energy so positivity can surround you. Natural Citrine Tumbled Stones also balance the Solar Plexus Chakra, enhancing your mental clarity, confidence, and will power. Price is for one (1) Tumbled Citrine Natural.',
+        surface: 'Polished',
+        jewelry_category: 'None',
+        intentions: 'Happiness, Abundance, Positivity',
+        chakra: 'Sacral',
+        zodiac: 'Sagittarius',
+        element: 'Fire',
+        price: '$8.5',
+        image: './assets/citrine-tumbled-stone.jpeg'
+    },
+    {
+        name: 'Moss Agate Tumbled Stones',
+        origin: 'Brazil',
+        size: '0.75" to 1.5" - varying sizes available',
+        shape: 'Natural tumbled stone',
+        description: 'Known as an Earth Element stone strongly connected to nature, a Moss Agate Tumbled Stone can connect your physical body to the Earth and spiritually attach you to nature\'s vibrations. These polished tumbled stones can help you during new beginnings and experiences and inspire stability of mind and body. They can balance your spirit and clear your mind and body. Moss Agate Tumbled Stones also open the Root Chakra to help ground and stabilize you. Price is for one (1) Tumbled Moss Agate.',
+        surface: 'Polished',
+        jewelry_category: 'None',
+        intentions: 'Grounding, Stability, Abundance, New Beginnings',
+        chakra: 'Root',
+        zodiac: 'Virgo',
+        element: 'Earth',
+        price: '$4.75',
+        image: './assets/moss-agate-tumbled-stone.jpeg'
+    },
+    {
+        name: 'Rose Quartz Tumbled Stones',
+        origin: '',
+        size: '0.5" to 1.5" - varying sizes available',
+        shape: 'Natural tumbled stone',
+        description: 'Welcome all forms of love into your life with the help of a Rose Quartz Tumbled Stone. These natural polished tumbled stones not only help with fostering romantic love, but familial love, platonic love, and self-love as well. They can strengthen your empathy and sensitivity, relieve stress, calm negative emotions, and open you to compassion. Rose Quartz Tumbled Stones are also known as powerful heart healers that stimulate the Heart Chakra, balancing your heart and opening you to new love and positive emotions. Price is for one (1) Tumbled Rose Quartz.',
+        surface: 'Polished',
+        jewelry_category: 'None',
+        intentions: 'Love, Stress Relief, Heart Healer',
+        chakra: 'Heart',
+        zodiac: 'Taurus',
+        element: 'Water',
+        price: '$4.25',
+        image: './assets/rose-quartz-tumbled-stone.jpeg'
+    },
+    {
+        name: 'Amethyst Tumbled Stones',
+        origin: '',
+        size: '0.75" to 1.75" - varying sizes available',
+        shape: 'Natural tumbled stone',
+        description: 'As natural stress relievers, these polished Amethyst Tumbled Stones are perfect for anyone who feels like they have the weight of the world on their shoulders. You can carry these stones around to help keep yourself calm and peaceful during the day, whether you\'re at work or on-the-go doing errands. These Amethyst Tumbled Stones are also good at strengthening your spirituality and intuition. Price is for one (1) Tumbled Amethyst. ',
+        surface: 'Polished',
+        jewelry_category: 'None',
+        intentions: 'Stress Relief, Calming, Love, Intuition',
+        chakra: 'Crown',
+        zodiac: 'Aquarius',
+        element: 'Water',
+        price: '$6.75',
+        image: './assets/amethyst-tumbled-stone.jpeg'
+    },
 ]
+
+db.Crystal.deleteMany({}, (err, crystals) => {
+    if (err) {
+        console.log('Error occured in remove', err)
+    } else {
+        console.log('Removed all crystals')
+    }
+
+    db.Crystal.create(initial_crystals, (err, crystals) => {
+        if (err) {
+            console.log("Error on creating crystals:", err)
+        } else {
+            console.log("Created", crystals.length, "crystals")
+        }
+    })
+})
