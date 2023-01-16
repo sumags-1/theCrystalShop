@@ -26,13 +26,20 @@ export async function loginToAccount(formData) {
 // }
 
 //crystalhome index route
-export async function getIndexRoute(){
-    const {data} = await axios.get('http://localhost:5001/crystal')
+export async function getIndexRoute() {
+    const { data } = await axios.get('http://localhost:5001/crystal')
     return data
 }
 
 //add a crystal - admin function
 export async function createCrystal(formData) {
-    const crystalData  = await axios.post('http://localhost:5001/crystal/', formData)
+    const crystalData = await axios.post('http://localhost:5001/crystal/', formData)
     return crystalData.data
 }
+
+//show a crystal
+export async function showCrystal(id) {
+    const crystalData = await axios.get(`http://localhost:5001/crystal/${id}`)
+    return crystalData.data
+}
+

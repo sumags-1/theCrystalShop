@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom"
 
-export default function CrystalHome({ crystals }) {
+
+export default function CrystalHome({ crystals, getCrystalbyID }) {
     // console.log(crystals);
 
     return (
@@ -10,14 +12,17 @@ export default function CrystalHome({ crystals }) {
                     return (
                         <div key={i}>
                             <div>
-                                <img src={crystal.image} alt="Crystals"></img>
-                                    <div>
-                                        <div>{crystal.name}</div>
-                                        <p>{crystal.description}
-                                        </p>
-                                    </div></div>
+                                <Link onClick={() => getCrystalbyID(crystal._id)}
+                                    to={`/crystal/${crystal._id}`}>
+                                    <img src={crystal.image} alt="Crystals" width="350px"></img></Link>
+                                <div>
+                                    <div>{crystal.name}</div>
+                                    <p>{crystal.description}
+                                    </p>
+                                </div></div>
+                            <hr></hr>
+                            <br></br>
 
-                            
                         </div>
                     )
 

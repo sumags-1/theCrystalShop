@@ -17,13 +17,14 @@ import Nav from './components/Nav';
 import SignUp from './components/SignUp'
 
 import './App.css';
-
+import { showCrystal } from './utils/api';
 
 function App() {
 
   const navigate = useNavigate()
   const [crystals, setCrystals] = useState([]);
   const [isLoggedIn, setLogInStatus] = useState(false)
+  const [shownCrystal, setShownCrystal] = useState([])
 
 
 
@@ -48,6 +49,13 @@ function App() {
     navigate('/')
   }
 
+  // function to grab trails by state
+  async function getCrystalbyID(id) {
+    const shownCrystalData = await axios.get(`http://localhost:5001/crystal/${id}`)
+    setShownCrystal(shownCrystalData.data)
+    // setReviews(shownTrailData.data.reviews)
+  }
+
 
   return (
     <div className="App">
@@ -58,7 +66,7 @@ function App() {
 
         <Route
           path='/crystal'
-          element={<CrystalHome crystals={crystals} isLoggedIn={isLoggedIn} />}
+          element={<CrystalHome getCrystalbyID={getCrystalbyID} crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
@@ -82,8 +90,8 @@ function App() {
         />
 
         <Route
-          path='/crystal/showcrystal'
-          element={<ShowCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+          exact path='/crystal/:id'
+          element={<ShowCrystal shownCrystal={shownCrystal} crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
