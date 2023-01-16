@@ -25,3 +25,14 @@ export async function loginToAccount(formData) {
 //     return userD.data
 // }
 
+//crystalhome index route
+export async function getIndexRoute(){
+    const {data} = await axios.get('http://localhost:5001/crystal')
+    return data
+}
+
+//add a crystal - admin function
+export async function createCrystal(formData) {
+    const crystalData  = await axios.post('http://localhost:5001/crystal/', formData)
+    return crystalData.data
+}
