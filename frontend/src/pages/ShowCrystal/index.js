@@ -20,6 +20,7 @@ export default function ShowCrystal({ shownCrystal }) {
         ))
     }
 
+
     return (
         <div>
             <img src={shownCrystal.image} width="350px"></img>
@@ -35,9 +36,11 @@ export default function ShowCrystal({ shownCrystal }) {
             <p>{shownCrystal.zodiac}</p>
             <p>{displayReview(shownCrystal.reviews)}</p>
 
-            <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link> <br></br>
-            <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link> <br></br>
-
+            <div>
+                <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link>
+                <br></br>
+                <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link> <br></br>
+            </div>
         </div>
 
 
