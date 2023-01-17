@@ -43,3 +43,10 @@ export async function showCrystal(id) {
     return crystalData.data
 }
 
+//edit a crystal
+
+//delete a crystal
+export async function deleteCrystal(id) {
+    const deletedCrystal = await axios.delete(`http://localhost:5001/crystal/${id}`)
+    return console.log('crystal entry deleted!');
+}
