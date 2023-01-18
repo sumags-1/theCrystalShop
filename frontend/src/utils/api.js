@@ -50,3 +50,9 @@ export async function deleteCrystal(id) {
     const deletedCrystal = await axios.delete(`http://localhost:5001/crystal/${id}`)
     return console.log('crystal entry deleted!');
 }
+
+// create review
+export async function createReview(id, formState) {
+    const createdReview = await axios.put(`http://localhost:5001/crystal/${id}/review`, formState)
+    return createdReview.data
+};

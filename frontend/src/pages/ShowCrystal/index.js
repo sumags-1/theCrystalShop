@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { deleteCrystal } from "../../utils/api";
+import CreateReview from "../../components/CreateReview";
 
 
 export default function ShowCrystal({ shownCrystal }) {
@@ -11,7 +12,6 @@ export default function ShowCrystal({ shownCrystal }) {
         if (!shownCrystal.reviews) return null
         return reviews.map((review, i) => (
             <div key={i}>
-                <p>Reviews:</p>
                 <p>{review.title}</p>
                 <p>{review.content}</p>
                 <p>{review.rating}</p>
@@ -34,7 +34,18 @@ export default function ShowCrystal({ shownCrystal }) {
             <p>{shownCrystal.chakra}</p>
             <p>{shownCrystal.element}</p>
             <p>{shownCrystal.zodiac}</p>
+            <p>Reviews:</p>
             <p>{displayReview(shownCrystal.reviews)}</p>
+
+            <h2>Leave a Review!</h2>
+
+            <br></br>
+
+            <div>
+                <CreateReview />
+            </div>
+
+            <br></br>
 
             <div>
                 <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link>
