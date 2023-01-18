@@ -49,7 +49,7 @@ function App() {
     navigate('/')
   }
 
-  // function to grab trails by state
+  // function to grab crystals by id
   async function getCrystalbyID(id) {
     const shownCrystalData = await axios.get(`http://localhost:5001/crystal/${id}`)
     setShownCrystal(shownCrystalData.data)
@@ -95,7 +95,7 @@ function App() {
         />
 
         <Route
-          path='/crystal/editcrystal'
+          exact path='/editcrystal/:id'
           element={<EditCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 

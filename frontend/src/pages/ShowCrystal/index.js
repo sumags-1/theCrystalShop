@@ -14,10 +14,10 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
     useEffect(() => {
         if (isLoggedIn) {
             if (localStorage.admin == 'yes') {
-                // console.log("I can see this");
+                console.log(shownCrystal._id);
                 setEditDeleteOptions(initialState.concat(
                     <div>
-                        <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link>
+                        <Link to={`/editcrystal/${shownCrystal._id}`}>Edit Crystal</Link>
                         <br></br>
                         <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link>
                         <br></br>
@@ -50,7 +50,7 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
 
 
     return (
-        <div>
+        <main>
             <p>{shownCrystal.name} </p>
             {console.log(shownCrystal.image)}
             <img src={shownCrystal.image} alt="Crystals" width="350px"></img>
@@ -77,7 +77,7 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
             <br></br>
             {editDeleteOptions}
 
-        </div>
+        </main>
 
 
     )

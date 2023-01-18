@@ -44,6 +44,16 @@ export async function showCrystal(id) {
 }
 
 //edit a crystal
+export async function editCrystal(id) {
+    const editedCrystalForm = await axios.get(`http://localhost:5001/crystal/${id}`)
+    return editedCrystalForm.data
+}
+
+//update a crystal
+export async function updateCrystal(id, formState) {
+    const updatedCrystalForm = await axios.put(`http://localhost:5001/crystal/${id}`, formState)
+    return updatedCrystalForm.data
+}
 
 //delete a crystal
 export async function deleteCrystal(id) {
