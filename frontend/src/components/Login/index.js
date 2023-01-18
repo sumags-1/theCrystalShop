@@ -32,10 +32,10 @@ useEffect(() => {
         <form>
             <h1>Log In</h1>
             <label htmlFor='username'>User Name:</label>
-            <input type='text' name='username' value={formData.username} onChange={handleChange} required />
+            <input type='text' id='username' name='username' value={formData.username} onChange={handleChange} required />
 
             <label htmlFor='password'>Password:</label>
-            <input type='password' name='password' value={formData.password} onChange={handleChange} required />
+            <input type='password' id='password' name='password' value={formData.password} onChange={handleChange} required />
 
             <button onClick={handleSubmit}>Log In</button>
         </form>

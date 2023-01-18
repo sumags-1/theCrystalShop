@@ -18,25 +18,26 @@ export default function SignUp(props) {
                 localStorage.admin = data.user.admin
                 localStorage.token = data.token
                 props.setLogInStatus(true)
+                // navigate('/crystal')
             })
     }
 
- // redirect to home page if logged in
- useEffect(() => {
-    if (props.isLoggedIn) {
-      navigate('/crystal')
-    }
-  }, [props.isLoggedIn])
+    // redirect to home page if logged in
+    useEffect(() => {
+        if (props.isLoggedIn) {
+            navigate('/crystal')
+        }
+    }, [props.isLoggedIn])
 
 
     return (
         <form>
             <h1>Sign Up</h1>
             <label htmlFor='username'>User Name:</label>
-            <input type='text' name='username' value={formData.username} onChange={handleChange} required />
+            <input type='text' id='username' name='username' value={formData.username} onChange={handleChange} required />
 
             <label htmlFor='password'>Password:</label>
-            <input type='password' name='password' value={formData.password} onChange={handleChange} required />
+            <input type='password' id='password' name='password' value={formData.password} onChange={handleChange} required />
 
             <button onClick={handleSubmit}>Sign Up</button>
         </form>
