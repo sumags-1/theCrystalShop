@@ -13,12 +13,13 @@ export default function CrystalHome({ crystals, getCrystalbyID }) {
                         <div key={i}>
                             <div>
                                 <Link onClick={() => getCrystalbyID(crystal._id)} to={`/crystal/${crystal._id}`}>
-                                <img src={crystal.image} alt="Crystals" width="350px"></img>
+                                    <img src={crystal.image} alt="Crystals" width="350px"></img>
                                 </Link>
-                            <div>
-                            <div>{crystal.name}</div>
-                            <p>{crystal.description}</p>
-                                </div></div>
+                                <div>
+                                    <div>{crystal.name}</div>
+                                    <p>{crystal.description}</p>
+                                </div>
+                            </div>
                             <hr></hr>
                             <br></br>
 

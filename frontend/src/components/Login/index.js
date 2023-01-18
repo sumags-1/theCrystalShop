@@ -14,8 +14,8 @@ export default function Login(props) {
         e.preventDefault()
         loginToAccount(formData)
             .then((data) => {
-                localStorage.username = data.user.username
-                localStorage.admin = data.user.admin
+                localStorage.username = data.username
+                localStorage.admin = data.admin
                 localStorage.token = data.token
                 props.setLogInStatus(true)
             })

@@ -14,7 +14,7 @@ const initial_crystals = [
         zodiac: 'All signs',
         element: 'Earth',
         price: '$12.50',
-        image: './assets/abundance-bracelet-jasper-aventurine.jpeg'
+        image: '/assets/abundance-bracelet-jasper-aventurine.jpeg'
     },
     {
         name: 'Tigers Eye Bracelet',
@@ -29,7 +29,7 @@ const initial_crystals = [
         zodiac: 'Leo',
         element: 'Fire',
         price: '$20',
-        image: './assets/tigers-eye-bracelet.jpeg'
+        image: '/assets/tigers-eye-bracelet.jpeg'
     },
     {
         name: 'Clear Quartz Bracelet',
@@ -44,7 +44,7 @@ const initial_crystals = [
         zodiac: 'All signs',
         element: 'Water',
         price: '$18',
-        image: './assets/clear-quartz-bracelet.jpeg'
+        image: '/assets/clear-quartz-bracelet.jpeg'
     },
     {
         name: 'Black Obsidian Bracelet',
@@ -59,7 +59,7 @@ const initial_crystals = [
         zodiac: 'Sagittarius',
         element: 'Earth',
         price: '$20',
-        image: './assets/black-obsidian-bracelet.jpeg'
+        image: '/assets/black-obsidian-bracelet.jpeg'
     },
     {
         name: 'Amethyst (A grade) Bracelet',
@@ -74,7 +74,7 @@ const initial_crystals = [
         zodiac: 'Pisces',
         element: 'Air',
         price: '$26',
-        image: './assets/amethyst-bracelet.jpeg'
+        image: '/assets/amethyst-bracelet.jpeg'
     },
     {
         name: 'Rose Quartz, Garnet, Strawberry Quartz',
@@ -89,7 +89,7 @@ const initial_crystals = [
         zodiac: 'All signs',
         element: 'Earth',
         price: '$23',
-        image: './assets/universal-love-bracelet.jpeg'
+        image: '/assets/universal-love-bracelet.jpeg'
     },
     {
         name: 'Clear Quartz Tumbled Stones',
@@ -104,7 +104,7 @@ const initial_crystals = [
         zodiac: 'All signs',
         element: 'Water',
         price: '$2',
-        image: './assets/clear-quartz-tumbled-stone.jpeg'
+        image: '/assets/clear-quartz-tumbled-stone.jpeg'
     },
     {
         name: 'Black Obsidian Tumbled Stones',
@@ -119,7 +119,7 @@ const initial_crystals = [
         zodiac: 'Sagittarius',
         element: 'Earth',
         price: '$1.5',
-        image: './assets/black-obsidian-tumbled-stone.jpeg'
+        image: '/assets/black-obsidian-tumbled-stone.jpeg'
     },
     {
         name: 'Citrine Tumbled Stones',
@@ -134,7 +134,7 @@ const initial_crystals = [
         zodiac: 'Sagittarius',
         element: 'Fire',
         price: '$8.5',
-        image: './assets/citrine-tumbled-stone.jpeg'
+        image: '/assets/citrine-tumbled-stone.jpeg'
     },
     {
         name: 'Moss Agate Tumbled Stones',
@@ -149,7 +149,7 @@ const initial_crystals = [
         zodiac: 'Virgo',
         element: 'Earth',
         price: '$4.75',
-        image: './assets/moss-agate-tumbled-stone.jpeg'
+        image: '/assets/moss-agate-tumbled-stone.jpeg'
     },
     {
         name: 'Rose Quartz Tumbled Stones',
@@ -164,7 +164,7 @@ const initial_crystals = [
         zodiac: 'Taurus',
         element: 'Water',
         price: '$4.25',
-        image: './assets/rose-quartz-tumbled-stone.jpeg'
+        image: '/assets/rose-quartz-tumbled-stone.jpeg'
     },
     {
         name: 'Amethyst Tumbled Stones',
@@ -179,7 +179,7 @@ const initial_crystals = [
         zodiac: 'Aquarius',
         element: 'Water',
         price: '$6.75',
-        image: './assets/amethyst-tumbled-stone.jpeg'
+        image: '/assets/amethyst-tumbled-stone.jpeg'
     },
 ]
 

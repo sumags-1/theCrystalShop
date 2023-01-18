@@ -20,7 +20,7 @@ function AddCrystal() {
 
     return (
         <div>
-            <h2>Add a Crystal</h2><br></br>
+            <h2 className="text-blue-600">Add a Crystal</h2><br></br>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>
                 <input type="text" id="name" placeholder="Crystal Name" onChange={handleChange} value={formState.name || ''} required />

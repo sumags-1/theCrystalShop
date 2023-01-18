@@ -1,28 +1,36 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { editCrystal } from "../../utils/api";
 import { updateCrystal } from "../../utils/api";
 
-function EditCrystal() {
+function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals}) {
 
     const [formState, setFormState] = useState({})
+    // const [updatedArray, setUpdatedArray] = useState([])
     const navigate = useNavigate()
 
     const { id } = useParams()
-console.log({id})
-    useEffect(() => {
-        editCrystal(id).then(data => {
-            setFormState(data)
-        })
-    }, [id])
 
-    console.log(formState)
+
+    useEffect(() => {
+        setFormState(shownCrystal)
+    },[])
+
+    // console.log(formState)
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        updateCrystal(id, formState);
-        navigate('/crystal');
+        updateCrystal(shownCrystal._id, formState);
+        setShownCrystal(formState) //updates current crystal on Show page
+        const updatedArray=[...crystals] //updates list of crystals on Home page
+        for (let i=0; i < updatedArray.length; i++){
+            if (updatedArray[i]._id === shownCrystal._id){
+                updatedArray[i] = formState
+            }
+        }
+        setCrystals(updatedArray)
+        navigate(`/crystal/${shownCrystal._id}`);
     }
 
     const handleChange = (event) => {

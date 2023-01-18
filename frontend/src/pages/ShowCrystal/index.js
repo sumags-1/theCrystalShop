@@ -13,13 +13,19 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
 
     useEffect(() => {
         if (isLoggedIn) {
+            // console.log(shownCrystal)
             if (localStorage.admin == 'yes') {
-                console.log(shownCrystal._id);
+                // console.log(shownCrystal._id);
+
                 setEditDeleteOptions(initialState.concat(
-                    <div>
+                    <div key='1'>
                         <Link to={`/editcrystal/${shownCrystal._id}`}>Edit Crystal</Link>
                         <br></br>
-                        <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link>
+                        <Link onClick={() => 
+                            deleteCrystal(shownCrystal._id)
+                        //use same as edit for renewing crystals page    
+                        } 
+                            to='/crystal'>Delete Crystal</Link>
                         <br></br>
                         <Link to="/crystal">Back to Crystal list</Link>
                     </div>
@@ -27,13 +33,13 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
             }
             else {
                 setEditDeleteOptions(initialState.concat(
-                    <div>
+                    <div key='2'>
                         <Link to="/crystal">Back to Crystal list</Link>
                     </div>
                 ))
             }
         }
-    }, [isLoggedIn])
+    }, [isLoggedIn, shownCrystal._id])
 
 
     const displayReview = (reviews) => {
@@ -51,8 +57,9 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
 
     return (
         <main>
+            {/* <img src='/assets/amethyst-bracelet.jpeg'></img> */}
             <p>{shownCrystal.name} </p>
-            {console.log(shownCrystal.image)}
+            {/* {console.log(shownCrystal.image)} */}
             <img src={shownCrystal.image} alt="Crystals" width="350px"></img>
             <p>{shownCrystal.price}</p>
             <p>{shownCrystal.origin}</p>
@@ -64,15 +71,15 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
             <p>{shownCrystal.element}</p>
             <p>{shownCrystal.zodiac}</p>
             <p>Reviews:</p>
-            <p>{displayReview(shownCrystal.reviews)}</p>
+            <div>{displayReview(shownCrystal.reviews)}</div>
 
             <h2>Leave a Review!</h2>
 
             <br></br>
 
-            <div>
+        
                 <CreateReview />
-            </div>
+        
 
             <br></br>
             {editDeleteOptions}

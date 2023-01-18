@@ -14,20 +14,19 @@ export default function SignUp(props) {
         e.preventDefault()
         createUser(formData)
             .then((data) => {
-                localStorage.username = data.user.username
-                localStorage.admin = data.user.admin
+                localStorage.username = data.username
+                localStorage.admin = data.admin
                 localStorage.token = data.token
                 props.setLogInStatus(true)
-                // navigate('/crystal')
             })
     }
 
-    // redirect to home page if logged in
-    useEffect(() => {
-        if (props.isLoggedIn) {
-            navigate('/crystal')
-        }
-    }, [props.isLoggedIn])
+// redirect to home page if logged in
+useEffect(() => {
+    if (props.isLoggedIn) {
+      navigate('/crystal')
+    }
+  }, [props.isLoggedIn])
 
 
     return (

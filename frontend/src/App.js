@@ -24,7 +24,7 @@ function App() {
   const navigate = useNavigate()
   const [crystals, setCrystals] = useState([]);
   const [isLoggedIn, setLogInStatus] = useState(false)
-  const [shownCrystal, setShownCrystal] = useState([])
+  const [shownCrystal, setShownCrystal] = useState({})
 
 
 
@@ -53,7 +53,6 @@ function App() {
   async function getCrystalbyID(id) {
     const shownCrystalData = await axios.get(`http://localhost:5001/crystal/${id}`)
     setShownCrystal(shownCrystalData.data)
-    // setReviews(shownTrailData.data.reviews)
   }
 
 
@@ -96,7 +95,7 @@ function App() {
 
         <Route
           exact path='/editcrystal/:id'
-          element={<EditCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+          element={<EditCrystal shownCrystal={shownCrystal} setShownCrystal={setShownCrystal} crystals={crystals} setCrystals={setCrystals} isLoggedIn={isLoggedIn} />}
         />
 
       </Routes>
