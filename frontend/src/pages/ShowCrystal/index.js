@@ -6,7 +6,35 @@ import { deleteCrystal } from "../../utils/api";
 import CreateReview from "../../components/CreateReview";
 
 
-export default function ShowCrystal({ shownCrystal }) {
+export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
+
+    const initialState = []
+    const [editDeleteOptions, setEditDeleteOptions] = useState(initialState)
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            if (localStorage.admin == 'yes') {
+                // console.log("I can see this");
+                setEditDeleteOptions(initialState.concat(
+                    <div>
+                        <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link>
+                        <br></br>
+                        <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link>
+                        <br></br>
+                        <Link to="/crystal">Back to Crystal list</Link>
+                    </div>
+                ))
+            }
+            else {
+                setEditDeleteOptions(initialState.concat(
+                    <div>
+                        <Link to="/crystal">Back to Crystal list</Link>
+                    </div>
+                ))
+            }
+        }
+    }, [isLoggedIn])
+
 
     const displayReview = (reviews) => {
         if (!shownCrystal.reviews) return null
@@ -23,8 +51,9 @@ export default function ShowCrystal({ shownCrystal }) {
 
     return (
         <div>
-            <img src={shownCrystal.image} width="350px"></img>
             <p>{shownCrystal.name} </p>
+            {console.log(shownCrystal.image)}
+            <img src={shownCrystal.image} alt="Crystals" width="350px"></img>
             <p>{shownCrystal.price}</p>
             <p>{shownCrystal.origin}</p>
             <p>{shownCrystal.size}</p>
@@ -46,12 +75,8 @@ export default function ShowCrystal({ shownCrystal }) {
             </div>
 
             <br></br>
+            {editDeleteOptions}
 
-            <div>
-                <Link to={"/editcrystal/" + shownCrystal._id}>Edit Crystal</Link>
-                <br></br>
-                <Link onClick={() => deleteCrystal(shownCrystal._id)} to='/crystal'>Delete Crystal</Link> <br></br>
-            </div>
         </div>
 
 
