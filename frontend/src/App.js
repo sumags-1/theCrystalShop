@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import AddCrystal from './pages/AddCrystal'
 import EditCrystal from './pages/EditCrystal'
 import ShowCrystal from './pages/ShowCrystal'
+import ErrorPath from './pages/ErrorPath';
 
 //COMPONENTS
 import Login from './components/Login';
@@ -97,6 +98,8 @@ function App() {
           exact path='/editcrystal/:id'
           element={<EditCrystal shownCrystal={shownCrystal} setShownCrystal={setShownCrystal} crystals={crystals} setCrystals={setCrystals} isLoggedIn={isLoggedIn} />}
         />
+
+        <Route path='/*' element={<ErrorPath/>}></Route>
 
       </Routes>
 
