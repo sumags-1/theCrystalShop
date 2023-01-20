@@ -26,6 +26,7 @@ function App() {
   const [crystals, setCrystals] = useState([]);
   const [isLoggedIn, setLogInStatus] = useState(false)
   const [shownCrystal, setShownCrystal] = useState({})
+  const urlvar = 'https://new-beginnings-app.herokuapp.com'
 
 
 
@@ -37,7 +38,7 @@ function App() {
 
   useEffect(() => {
     async function getIndexRoute() {
-      const crystalData = await axios.get(`${process.env.APIURL}/crystal`)
+      const crystalData = await axios.get(`${urlvar}/crystal`)
       // console.log(crystalData.data)
       setCrystals(crystalData.data)
     }
@@ -52,7 +53,7 @@ function App() {
 
   // function to grab crystals by id
   async function getCrystalbyID(id) {
-    const shownCrystalData = await axios.get(`${process.env.APIURL}/crystal/${id}`)
+    const shownCrystalData = await axios.get(`${urlvar}/crystal/${id}`)
     setShownCrystal(shownCrystalData.data)
   }
 
