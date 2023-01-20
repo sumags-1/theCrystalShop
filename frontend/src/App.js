@@ -99,7 +99,7 @@ function App() {
           element={<EditCrystal shownCrystal={shownCrystal} setShownCrystal={setShownCrystal} crystals={crystals} setCrystals={setCrystals} isLoggedIn={isLoggedIn} />}
         />
 
-        <Route path='/*' element={<ErrorPath/>}></Route>
+        <Route path='/*' element={<ErrorPath />}></Route>
 
       </Routes>
 

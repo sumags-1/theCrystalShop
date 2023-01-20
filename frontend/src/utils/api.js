@@ -33,7 +33,7 @@ export async function getIndexRoute() {
 
 //add a crystal - admin function
 export async function createCrystal(formData) {
-    const crystalData = await axios.post('crystal/', formData)
+    const crystalData = await axios.post('/', formData)
     return crystalData.data
 }
 
