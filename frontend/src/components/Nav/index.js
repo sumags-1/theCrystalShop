@@ -9,7 +9,7 @@ import './styles.css'
 export default function Nav(props) {
     // state declaration: build JSX array of NavBar items
     const initialState = [
-        <div class='nav-item' key='1'><img src="/assets/new-beginnings-logo.png" className="logo" alt="logo"></img></div>,
+        <div class='nav-item' key='1'><img src="/assets/pexels-eva-bronzini-6474409.jpg" className="logo" alt="logo"></img></div>,
 
         <div class='nav-item text-4xl text-left' key='2'>
             <Link to='/'>
@@ -53,7 +53,7 @@ export default function Nav(props) {
 
     // render JSX
     return (
-        <nav class="bg-blue-50">
+        <nav class="bg-gray-300">
             {navItems}
         </nav>
     )

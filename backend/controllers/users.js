@@ -61,11 +61,13 @@ router.post('/signup', (req, res) => {
 								})
 								// send an error if the database fails to create a user
 							} else {
+								console.log('unable to create user')
 								res.sendStatus(401)
 							}
 						})
 					// send an error if the user already exists
 				} else {
+					console.log('user already exists')
 					res.sendStatus(401)
 				}
 			})
@@ -95,6 +97,7 @@ router.post('/login', async (req, res) => {
 		})
 		// if the user was not found in the database OR their password was incorrect, send an error
 	} else {
+		console.log('user does not exist')
 		res.sendStatus(401)
 	}
 })

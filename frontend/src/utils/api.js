@@ -10,7 +10,10 @@ export async function createUser(formData) {
 export async function loginToAccount(formData) {
     const { data } = await axios.post('http://localhost:5001/user/login', formData)
     // console.log(data)
-    return data
+    if (data == '401 (Unauthorized)') {
+        alert('user does not exist')
+    } else
+        return data
 }
 
 // // get user
@@ -59,7 +62,7 @@ export async function updateCrystal(id, formState) {
 //delete a crystal
 export async function deleteCrystal(id) {
     const deletedCrystal = await axios.delete(`http://localhost:5001/crystal/${id}`)
-    
+
     return console.log('crystal entry deleted!');
 }
 
