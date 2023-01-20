@@ -51,7 +51,7 @@ export async function editCrystal(id) {
 
 //update a crystal
 export async function updateCrystal(id, formState) {
-    const updatedCrystalForm = await axios.put(`crystal/${id}`, formState)
+    const updatedCrystalForm = await axios.put(`${id}`, formState)
     return updatedCrystalForm.data
 }
 
