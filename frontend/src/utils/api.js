@@ -57,7 +57,7 @@ export async function updateCrystal(id, formState) {
 
 //delete a crystal
 export async function deleteCrystal(id) {
-    const deletedCrystal = await axios.delete(`crystal/${id}`)
+    const deletedCrystal = await axios.delete(`${id}`)
 
     return console.log('crystal entry deleted!');
 }
