@@ -33,37 +33,37 @@ export async function getIndexRoute() {
 
 //add a crystal - admin function
 export async function createCrystal(formData) {
-    const crystalData = await axios.post('/', formData)
+    const crystalData = await axios.post('crystal/', formData)
     return crystalData.data
 }
 
 //show a crystal
 export async function showCrystal(id) {
-    const crystalData = await axios.get(`${id}`)
+    const crystalData = await axios.get(`crystal/${id}`)
     return crystalData.data
 }
 
 //edit a crystal
 export async function editCrystal(id) {
-    const editedCrystalForm = await axios.get(`${id}`)
+    const editedCrystalForm = await axios.get(`crystal/${id}`)
     return editedCrystalForm.data
 }
 
 //update a crystal
 export async function updateCrystal(id, formState) {
-    const updatedCrystalForm = await axios.put(`${id}`, formState)
+    const updatedCrystalForm = await axios.put(`crystal/${id}`, formState)
     return updatedCrystalForm.data
 }
 
 //delete a crystal
 export async function deleteCrystal(id) {
-    const deletedCrystal = await axios.delete(`${id}`)
+    const deletedCrystal = await axios.delete(`crystal/${id}`)
 
     return console.log('crystal entry deleted!');
 }
 
 // create review
 export async function createReview(id, formState) {
-    const createdReview = await axios.put(`${id}/review`, formState)
+    const createdReview = await axios.put(`crystal/${id}/review`, formState)
     return createdReview.data
 };

@@ -52,7 +52,7 @@ function App() {
 
   // function to grab crystals by id
   async function getCrystalbyID(id) {
-    const shownCrystalData = await axios.get(`${id}`)
+    const shownCrystalData = await axios.get(`crystal/${id}`)
     setShownCrystal(shownCrystalData.data)
   }
 
