@@ -29,16 +29,20 @@ export default function Login(props) {
     }, [props.isLoggedIn])
 
     return (
-        <div class="mx-auto border-black border-2 border-solid w-1/4 text-center">
+        <div class="my-6 mx-auto border-black border-2 border-solid w-1/4 text-center">
             <form>
-                <h1>Log In</h1>
+                <div class="p-4 text-center">
+                <h1>Log In</h1></div>
+                <div class="p-4 space-x-2">
                 <label htmlFor='username'>User Name:</label>
                 <input class="w-32 border-black border-1 border-solid" type='text' id='username' name='username' placeholder="Enter username" value={formData.username} onChange={handleChange} required />
-                <br></br>
+                </div>
+                <div class="p-4  space-x-2">
                 <label htmlFor='password'>Password:</label>
                 <input class="w-32 border-black border-1 border-solid" type='password' id='password' name='password' placeholder="Enter password" value={formData.password} onChange={handleChange} required />
-                <br></br>
-                <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Log In</button>
+                </div>
+                <div class="p-4 bg-gray-700 text-center text-white">
+                <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Log In</button></div>
             </form>
         </div>
     )
