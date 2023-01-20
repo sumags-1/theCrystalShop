@@ -9,9 +9,9 @@ import './styles.css'
 export default function Nav(props) {
     // state declaration: build JSX array of NavBar items
     const initialState = [
-        <div className='nav-item' key='1'><img src="/assets/new-beginnings-logo.png" className="logo" alt="logo"></img></div>,
+        <div class='nav-item' key='1'><img src="/assets/new-beginnings-logo.png" className="logo" alt="logo"></img></div>,
 
-        <div className='nav-item' key='2'>
+        <div class='nav-item text-4xl text-left' key='2'>
             <Link to='/'>
                 <h4>New Beginnings</h4>
             </Link>
@@ -26,9 +26,9 @@ export default function Nav(props) {
             if (localStorage.admin == 'yes') {
                 setNavItems(initialState.concat(
 
-                    <div className="nav-item menu-display" key='3'>
+                    <div class="nav-item menu-display" key='3'>
                         For Admins Only: <Link to="/crystal/addcrystal">Add a Crystal</Link></div>,
-                    <div className="nav-item menu-display" key='4'><p>Logged in as {localStorage.username}</p>
+                    <div class="nav-item menu-display" key='4'><p>Logged in as {localStorage.username}</p>
                         <button onClick={() => { props.logout() }}>Log Out</button>
                     </div>
                 ))
@@ -42,7 +42,7 @@ export default function Nav(props) {
             }
         } else {
             setNavItems(initialState.concat([
-                <div className="nav-item" key='3'>
+                <div class="nav-item" key='3'>
                     <Link to='/user/login'>
                         Log In
                     </Link>
@@ -53,7 +53,7 @@ export default function Nav(props) {
 
     // render JSX
     return (
-        <nav>
+        <nav class="bg-blue-50">
             {navItems}
         </nav>
     )

@@ -43,7 +43,7 @@ useEffect(() => {
             <input class="w-32 border-black border-1 border-solid" type='password' id='password' name='password' placeholder="Enter password" value={formData.password} onChange={handleChange} required />
             </div>
             <div class="p-4 bg-gray-700 text-center text-white">
-            <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Log In</button></div>
+            <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Sign Up</button></div>
         </form>
     </div>
     )
