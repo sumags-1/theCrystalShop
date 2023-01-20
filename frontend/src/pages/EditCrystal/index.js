@@ -30,7 +30,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals}) {
             }
         }
         setCrystals(updatedArray)
-        navigate(`/crystal/${shownCrystal._id}`);
+        navigate(`/crystalhome/${shownCrystal._id}`);
     }
 
     const handleChange = (event) => {

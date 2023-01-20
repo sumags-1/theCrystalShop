@@ -12,7 +12,7 @@ export default function CrystalHome({ crystals, getCrystalbyID }) {
                     return (
                         <div key={i}>
                             <div>
-                                <Link onClick={() => getCrystalbyID(crystal._id)} to={`/crystal/${crystal._id}`}>
+                                <Link onClick={() => getCrystalbyID(crystal._id)} to={`/crystalhome/${crystal._id}`}>
                                     <img src={crystal.image} alt="Crystals" width="350px"></img>
                                 </Link>
                                 <div>

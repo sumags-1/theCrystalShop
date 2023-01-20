@@ -27,7 +27,7 @@ export default function Nav(props) {
                 setNavItems(initialState.concat(
 
                     <div class="nav-item menu-display" key='3'>
-                        For Admins Only: <Link to="/crystal/addcrystal">Add a Crystal</Link></div>,
+                        For Admins Only: <Link to="/crystalhome/addcrystal">Add a Crystal</Link></div>,
                     <div class="nav-item menu-display" key='4'><p>Logged in as {localStorage.username}</p>
                         <button onClick={() => { props.logout() }}>Log Out</button>
                     </div>
