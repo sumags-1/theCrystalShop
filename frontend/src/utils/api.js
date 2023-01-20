@@ -39,31 +39,31 @@ export async function createCrystal(formData) {
 
 //show a crystal
 export async function showCrystal(id) {
-    const crystalData = await axios.get(`crystal/${id}`)
+    const crystalData = await axios.get(`${id}`)
     return crystalData.data
 }
 
 //edit a crystal
 export async function editCrystal(id) {
-    const editedCrystalForm = await axios.get(`crystal/${id}`)
+    const editedCrystalForm = await axios.get(`${id}`)
     return editedCrystalForm.data
 }
 
 //update a crystal
 export async function updateCrystal(id, formState) {
-    const updatedCrystalForm = await axios.put(`crystal/${id}`, formState)
+    const updatedCrystalForm = await axios.put(`${id}`, formState)
     return updatedCrystalForm.data
 }
 
 //delete a crystal
 export async function deleteCrystal(id) {
-    const deletedCrystal = await axios.delete(`crystal/${id}`)
+    const deletedCrystal = await axios.delete(`${id}`)
 
     return console.log('crystal entry deleted!');
 }
 
 // create review
 export async function createReview(id, formState) {
-    const createdReview = await axios.put(`crystal/${id}/review`, formState)
+    const createdReview = await axios.put(`${id}/review`, formState)
     return createdReview.data
 };
