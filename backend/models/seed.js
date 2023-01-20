@@ -1,5 +1,33 @@
 const db = require("./")
 
+const initial_users = [
+    {
+        username: "suma",
+        password: "123",
+        admin: "no"
+    },
+    {
+        username: "admin",
+        password: "admin",
+        admin: "yes"
+    },
+    {
+        username: "scott",
+        password: "scott",
+        admin: "yes"
+    },
+    {
+        username: "matt",
+        password: "matt",
+        admin: "yes"
+    },
+    {
+        username: "justin",
+        password: "justin",
+        admin: "yes"
+    }
+]
+
 const initial_crystals = [
     {
         name: 'Abundance bracelet with Green Aventurine and Jasper',
@@ -182,6 +210,22 @@ const initial_crystals = [
         image: '/assets/amethyst-tumbled-stone.jpeg'
     },
 ]
+
+db.User.deleteMany({}, (err, users) => {
+    if (err) {
+        console.log('Error occured in remove', err)
+    } else {
+        console.log('Removed all users')
+    }
+
+    db.User.create(initial_users, (err, users) => {
+        if (err) {
+            console.log("Error on creating crystals:", err)
+        } else {
+            console.log("Created", users.length, "users")
+        }
+    })
+})
 
 db.Crystal.deleteMany({}, (err, crystals) => {
     if (err) {

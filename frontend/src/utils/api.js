@@ -2,13 +2,13 @@ import axios from 'axios';
 
 // create user
 export async function createUser(formData) {
-    const { data } = await axios.post('user/signup', formData)
+    const { data } = await axios.post('signup', formData)
     return data
 }
 
 // log in to user account
 export async function loginToAccount(formData) {
-    const { data } = await axios.post('user/login', formData)
+    const { data } = await axios.post('login', formData)
     return data
 }
 
