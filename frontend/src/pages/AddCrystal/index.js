@@ -11,7 +11,7 @@ function AddCrystal() {
     const handleSubmit = (event) => {
         event.preventDefault();
         createCrystal(formState);
-        navigate('/crystal');
+        navigate('/crystalhome');
     }
 
     const handleChange = (event) => {

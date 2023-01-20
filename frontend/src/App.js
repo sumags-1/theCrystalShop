@@ -66,7 +66,7 @@ function App() {
       <Routes>
 
         <Route
-          path='/crystal'
+          path='/crystalhome'
           element={<CrystalHome getCrystalbyID={getCrystalbyID} crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 
@@ -86,12 +86,12 @@ function App() {
         />
 
         <Route
-          path='/crystal/addcrystal'
+          path='/crystalhome/addcrystal'
           element={<AddCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
-          exact path='/crystal/:id'
+          exact path='/crystalhome/:id'
           element={<ShowCrystal shownCrystal={shownCrystal} crystals={crystals} isLoggedIn={isLoggedIn} />}
         />
 

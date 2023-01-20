@@ -24,7 +24,7 @@ export default function SignUp(props) {
 // redirect to home page if logged in
 useEffect(() => {
     if (props.isLoggedIn) {
-      navigate('/crystal')
+      navigate('/crystalhome')
     }
   }, [props.isLoggedIn])
 

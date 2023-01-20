@@ -13,7 +13,7 @@ export default function Home(props) {
     // redirect to feed page if logged in
     useEffect(() => {
         if (props.isLoggedIn) {
-            navigate('/crystal')
+            navigate('/crystalhome')
         }
     }, [props.isLoggedIn])
 
@@ -23,7 +23,7 @@ export default function Home(props) {
         <div class="container p-14 text-align: center shadow" >
             <h1 class="font-extrabold text-white text-3xl">Welcome to New Beginnings </h1>
             <br></br>
-            <h3 class="text-white">Do you wish to <Link to='/user/signup'><button class="p-1.5 italic">Sign Up</button></Link>, <Link to='/user/login'><button class="p-1.5 italic">Log In</button></Link> or <Link to='/crystal'><button class="p-1.5 italic">Browse as a guest</button></Link> ?</h3>
+            <h3 class="text-white">Do you wish to <Link to='/user/signup'><button class="p-1.5 italic">Sign Up</button></Link>, <Link to='/user/login'><button class="p-1.5 italic">Log In</button></Link> or <Link to='/crystalhome'><button class="p-1.5 italic">Browse as a guest</button></Link> ?</h3>
            <br></br>
            <img src='/assets/3d-white-crystals.jpg' alt='crystals'></img>
            </div>

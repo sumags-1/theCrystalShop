@@ -21,7 +21,7 @@ export default function CreateReview() {
     const handleSubmit = (event) => {
         event.preventDefault();
         createReview(id, formState);
-        navigate('/crystal');
+        navigate('/crystalhome');
     };
 
     return (

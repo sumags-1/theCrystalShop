@@ -25,16 +25,16 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
                             deleteCrystal(shownCrystal._id)
                         //use same as edit for renewing crystals page    
                         } 
-                            to='/crystal'>Delete Crystal</Link>
+                            to='/crystalhome'>Delete Crystal</Link>
                         <br></br>
-                        <Link to="/crystal">Back to Crystal list</Link>
+                        <Link to="/crystalhome">Back to Crystal list</Link>
                     </div>
                 ))
             }
             else {
                 setEditDeleteOptions(initialState.concat(
                     <div key='2'>
-                        <Link to="/crystal">Back to Crystal list</Link>
+                        <Link to="/crystalhome">Back to Crystal list</Link>
                     </div>
                 ))
             }
