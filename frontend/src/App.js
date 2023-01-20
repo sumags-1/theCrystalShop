@@ -37,7 +37,7 @@ function App() {
 
   useEffect(() => {
     async function getIndexRoute() {
-      const crystalData = await axios.get("http://localhost:5001/crystal")
+      const crystalData = await axios.get("crystal")
       // console.log(crystalData.data)
       setCrystals(crystalData.data)
     }
@@ -52,7 +52,7 @@ function App() {
 
   // function to grab crystals by id
   async function getCrystalbyID(id) {
-    const shownCrystalData = await axios.get(`http://localhost:5001/crystal/${id}`)
+    const shownCrystalData = await axios.get(`crystal/${id}`)
     setShownCrystal(shownCrystalData.data)
   }
 
