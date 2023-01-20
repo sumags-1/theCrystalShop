@@ -6,7 +6,7 @@ export default function CrystalHome({ crystals, getCrystalbyID }) {
 
     return (
         <div>
-            <h1>Welcome to New Beginnings, your one stop Crystal Shop</h1>
+            {/* <h1>Welcome to New Beginnings, your one stop Crystal Shop</h1> */}
             <div>
                 {crystals && crystals.map((crystal, i) => {
                     return (
@@ -17,7 +17,7 @@ export default function CrystalHome({ crystals, getCrystalbyID }) {
                                 </Link>
                                 <div>
                                     <div>{crystal.name}</div>
-                                    <p>{crystal.description}</p>
+                                    {/* <p>{crystal.description}</p> */}
                                 </div>
                             </div>
                             <hr></hr>
