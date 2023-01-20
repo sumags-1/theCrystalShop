@@ -4,13 +4,13 @@ const urlvar = 'https://new-beginnings-app.herokuapp.com'
 
 // create user
 export async function createUser(formData) {
-    const { data } = await axios.post(`${urlvar}/signup`, formData)
+    const { data } = await axios.post(`${urlvar}/user/signup`, formData)
     return data
 }
 
 // log in to user account
 export async function loginToAccount(formData) {
-    const { data } = await axios.post(`${urlvar}/login`, formData)
+    const { data } = await axios.post(`${urlvar}/user/login`, formData)
     return data
 }
 
