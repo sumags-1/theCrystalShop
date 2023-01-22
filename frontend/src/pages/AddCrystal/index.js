@@ -207,9 +207,9 @@ function AddCrystal() {
                 <br></br>
                 <div class="md:flex md:items-center">
                     <div class="mx-auto">
-                        <button class="shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <input type="submit" class="shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
                             SUBMIT
-                        </button>
+                        </input>
                     </div>
                 </div>
 
