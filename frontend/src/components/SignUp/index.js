@@ -30,23 +30,21 @@ useEffect(() => {
 
 
     return (
-        <div class="w-full max-w-xs">
-        <div class="my-6 bg-slate-400 mx-auto border-black border-2 border-solid w-1/4 text-center">
-        <form class="shadow-md px-10 border-black border-1 border-solid rounded">
-            <div class="mb-4 p-4 text-center">
-                <h1>SIGN UP</h1></div>
+        <div class="parent w-full text-center mt-10">
+        <form class="mx-auto text-center child shadow-md px-10 border-black border-1 border-solid rounded">
+            <div class="mb-4 p-4 text-center text-xl font-semibold">
+                SIGN UP TO CREATE AN ACCOUNT</div>
             <div class="mb-4 p-4 space-x-2">
-                <label htmlFor='username' class="block text-md font-bold mb-2">User Name:</label>
-                <input class="shadow border rounded py-3 px-3 w-32 focus: shadow-outline" type='text' id='username' name='username' placeholder="Enter username" value={formData.username} onChange={handleChange} required />
+                <label htmlFor='username' class="block text-md font-bold mb-2">User Name</label>
+                <input class="shadow border rounded py-3 px-3 w-40 leading-tight focus: shadow-outline" type='text' id='username' name='username' placeholder="Enter username" value={formData.username} onChange={handleChange} required />
             </div>
-            <div class="p-4  space-x-2">
-                <label htmlFor='password' class="block text-md font-bold mb-2">Password:</label>
-                <input class="shadow border rounded py-3 px-3 w-32 focus: shadow-outline" type='password' id='password' name='password' placeholder="Enter password" value={formData.password} onChange={handleChange} required />
+            <div class="p-4 mb-4 space-x-2">
+                <label htmlFor='password' class="block text-md font-bold mb-2">Password</label>
+                <input class="shadow border rounded py-3 px-3 w-40 leading-tight focus: shadow-outline" type='password' id='password' name='password' placeholder="Enter password" value={formData.password} onChange={handleChange} required />
             </div>
-            <div class="p-4 bg-gray-700 text-center text-white">
+            <div class="mx-auto mb-4 p-4 w-fit bg-gray-700 rounded text-center text-white">
                 <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Sign Up</button></div>
         </form>
-        </div>
-    </div>
+   </div>
     )
 }

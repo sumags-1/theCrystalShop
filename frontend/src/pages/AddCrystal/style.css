@@ -1,0 +1,13 @@
+.parent {
+    background-color: white;
+    color: black;
+    height: 100vh;
+}
+
+.child {
+    background-color: rgb(155, 155, 158);
+    color: black;
+    width: 70%;
+    margin: 0 auto;
+    /* height: 100vh; */
+}
