@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createUser } from '../../utils/api';
 import { useNavigate } from 'react-router-dom';
+import './style.css'
 
 export default function SignUp(props) {
     const [formData, setFormData] = useState({ username: '', password: '' })

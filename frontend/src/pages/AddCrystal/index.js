@@ -20,9 +20,9 @@ function AddCrystal() {
     }
 
     return (
-        <div class="parent">
+        <div class="parent w-full">
 
-            <form class="child w-full max-w-sm text-center" onSubmit={handleSubmit}>
+            <form class="child mx-auto text-center" onSubmit={handleSubmit}>
                 <h2 class="font-black text-3xl tracking-wide">ADD A CRYSTAL</h2><br></br>
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
@@ -31,7 +31,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="name" placeholder="Crystal Name" onChange={handleChange} value={formState.name || ''} />
+                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="name" placeholder="Crystal Name" onChange={handleChange} value={formState.name || ''} />
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="origin" placeholder="Origin of Crystal" onChange={handleChange} value={formState.origin || ''} />
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="origin" placeholder="Origin of Crystal" onChange={handleChange} value={formState.origin || ''} />
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="size" placeholder="Size of Crystal" onChange={handleChange} value={formState.size || ''} />
+                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="size" placeholder="Size of Crystal" onChange={handleChange} value={formState.size || ''} />
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="shape" placeholder="Shape of Crystal" onChange={handleChange} value={formState.shape || ''} />
+                        <input required class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="shape" placeholder="Shape of Crystal" onChange={handleChange} value={formState.shape || ''} />
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" id="description" rows="10" cols="20" onChange={handleChange} value={formState.description || ''} ></textarea>
+                        <textarea class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" id="description" rows="10" cols="20" onChange={handleChange} value={formState.description || ''} ></textarea>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="intentions" placeholder="Intentions for which Crystal is used" onChange={handleChange} value={formState.intentions || ''} />
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="intentions" placeholder="Intentions for which Crystal is used" onChange={handleChange} value={formState.intentions || ''} />
                     </div>
                 </div>
 
@@ -106,7 +106,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <select id="surface" onChange={handleChange} value={formState.surface} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
+                        <select id="surface" onChange={handleChange} value={formState.surface} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
                             <option>Surface of crystal</option>
                             <option value="Polished">Polished</option>
                             <option value="Raw">Raw</option>
@@ -123,7 +123,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <select id="chakra" onChange={handleChange} value={formState.chakra} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
+                        <select id="chakra" onChange={handleChange} value={formState.chakra} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
                             <option>Chakra that crystal affects</option>
                             <option value="Root">Root</option>
                             <option value="Sacral">Sacral</option>
@@ -144,7 +144,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <select id="zodiac" onChange={handleChange} value={formState.zodiac} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
+                        <select id="zodiac" onChange={handleChange} value={formState.zodiac} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
                             <option>Zodiac signs that crystal affects</option>
                             <option value="All signs">All Signs</option>
                             <option value="Aries">Aries</option>
@@ -171,7 +171,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <select id="element" onChange={handleChange} value={formState.element} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
+                        <select id="element" onChange={handleChange} value={formState.element} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
                             <option>Element that crystal belongs to</option>
                             <option value="Fire">Fire</option>
                             <option value="Earth">Earth</option>
@@ -189,7 +189,7 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="price" placeholder="Price per piece" onChange={handleChange} value={formState.price || ''} required />
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="price" placeholder="Price per piece" onChange={handleChange} value={formState.price || ''} required />
                     </div>
                 </div>
 
@@ -201,14 +201,13 @@ function AddCrystal() {
                         </label>
                     </div>
                     <div class="md:w-2/3">
-                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="image" placeholder="Image" onChange={handleChange} value={formState.image || ''} />
+                        <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black" type="text" id="image" placeholder="Image" onChange={handleChange} value={formState.image || ''} />
                     </div>
                 </div>
                 <br></br>
                 <div class="md:flex md:items-center">
-                    <div class="md:w-1/3"></div>
-                    <div class="md:w-2/3">
-                        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="button">
+                    <div class="mx-auto">
+                        <button class="shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             SUBMIT
                         </button>
                     </div>

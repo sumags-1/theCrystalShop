@@ -2,12 +2,13 @@
     background-color: white;
     color: black;
     height: 100vh;
+    width: 100%;
 }
 
 .child {
-    background-color: rgb(171, 171, 175);
+    background-color: rgb(186, 186, 189);
     color: black;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     /* height: 100vh; */
 }
