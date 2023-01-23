@@ -13,9 +13,7 @@ export default function ShowCrystal({ shownCrystal, crystals, setCrystals, isLog
 
     useEffect(() => {
         if (isLoggedIn) {
-            // console.log(shownCrystal)
             if (localStorage.admin == 'yes') {
-                // console.log(shownCrystal._id);
 
                 setEditDeleteOptions(initialState.concat(
                     <div key='1'>
@@ -46,9 +44,9 @@ export default function ShowCrystal({ shownCrystal, crystals, setCrystals, isLog
             else {
                 setEditDeleteOptions(initialState.concat(
                     <div key='2'>
-                         <div class="w-fit shadow inline-block bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
-                        
-                        <Link to="/crystalhome">Back to Crystal list</Link>
+                        <div class="w-fit shadow inline-block bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
+
+                            <Link to="/crystalhome">Back to Crystal list</Link>
                         </div>
                     </div>
                 ))
@@ -61,10 +59,10 @@ export default function ShowCrystal({ shownCrystal, crystals, setCrystals, isLog
         if (!shownCrystal.reviews) return null
         return reviews.map((review, i) => (
             <div key={i} class="mb-3 p-3">
-                <p>{review.title}</p>
-                <p>{review.content}</p>
-                <p>{review.rating}</p>
-                <p>{review.reviewer}</p>
+                <p>Title: {review.title}</p>
+                <p>Content: {review.content}</p>
+                <p>Rating (out of 5):{review.rating}</p>
+                <p>Reviewer: {review.reviewer}</p>
             </div>
         ))
     }
