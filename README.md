@@ -102,6 +102,24 @@ https://new-beginnings-app.herokuapp.com/
 <br>
 
 
+###Route Chart:###
+<b>ROUTES :</b> 
+
+| **URL**   | **HTTP Verb** | **REST Action** | **CRUD Action** |
+| --------- | ------------- | --------------- | --------------- |
+| /crystalhome/    | GET           | index           | read            |
+| /crystalhome/:id | GET           | show            | read            |
+| /crystalhome/addcrystal | GET           | new             | read            |
+| /crystalhome     | POST          | create          | create          |
+| /editcrystal/:id | GET      | edit            | read            |
+| /editcrystal/:id | PUT     | update          | update          |
+| /crystalhome/:id | DELETE        | destroy         | delete          |
+| /user/login    | GET           | index           | read            |
+| /user/signup     | POST          | create          | create          |
+
+
+
+
 ### Wireframes: 
 **Visitor view:**<br>
 <img width="629" alt="Screen Shot 2023-01-10 at 12 37 13 PM" src="https://user-images.githubusercontent.com/115961145/213979258-f78fd617-fa71-4c52-9151-bb205747321a.png">
