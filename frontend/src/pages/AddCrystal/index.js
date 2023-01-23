@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { createCrystal } from "../../utils/api";
 import './style.css'
 
-function AddCrystal() {
+function AddCrystal({ crystals, setCrystals }) {
 
     const [formState, setFormState] = useState({})
     const navigate = useNavigate()
@@ -12,6 +12,16 @@ function AddCrystal() {
     const handleSubmit = (event) => {
         event.preventDefault();
         createCrystal(formState);
+
+        const updatedArray = [...crystals] //updates list of crystals on Home page
+        // for (let i = 0; i < updatedArray.length; i++) {
+        //     if (updatedArray[i]._id === shownCrystal._id) {
+        //         updatedArray.splice(i, 1)
+        //         // updatedArray[i] = formState
+        //     }
+        updatedArray.push([formState])
+        // }
+        setCrystals(updatedArray)
         navigate('/crystalhome');
     }
 
