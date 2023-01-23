@@ -37,6 +37,7 @@ https://new-beginnings-app.herokuapp.com/
 <ul>
 	<li>The app can be accessed from the live site link given above. </li>
 	<li>To run locally, clone the main branch, setup env file to point to mongodb, run npm i at the root level to install all dependencies and finally run npm start to start the application on localhost</li>
+	<li>Next run the seed file under models to setup initial admin profiles as well as the seed crystal data
 	<li>Once the app is up, you can signup for a normal user or browse around as a guest. Unfortunately you CANNOT signup for admin privileges.. To access admin level privileges, refer section below and use one of the already setup profiles. 
 </ul>
 <br>
