@@ -19,30 +19,37 @@ export default function ShowCrystal({ shownCrystal, crystals, setCrystals, isLog
 
                 setEditDeleteOptions(initialState.concat(
                     <div key='1'>
-                        <Link to={`/editcrystal/${shownCrystal._id}`}>Edit Crystal</Link>
-                        <br></br>
-                        <Link onClick={() => {
-                            deleteCrystal(shownCrystal._id)
-                            const updatedArray = [...crystals] //updates list of crystals on Home page
-                            for (let i = 0; i < updatedArray.length; i++) {
-                                if (updatedArray[i]._id === shownCrystal._id) {
-                                    updatedArray.splice(i, 1)
-                                    // updatedArray[i] = formState
+                        <div class="w-32 inline-block shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
+                            <Link to={`/editcrystal/${shownCrystal._id}`}>Edit Crystal</Link>
+                        </div>
+
+                        <div class="w-fit inline-block shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
+                            <Link onClick={() => {
+                                deleteCrystal(shownCrystal._id)
+                                const updatedArray = [...crystals] //updates list of crystals on Home page
+                                for (let i = 0; i < updatedArray.length; i++) {
+                                    if (updatedArray[i]._id === shownCrystal._id) {
+                                        updatedArray.splice(i, 1)
+                                    }
                                 }
+                                setCrystals(updatedArray)
                             }
-                            setCrystals(updatedArray)
-                        }
-                        }
-                            to='/crystalhome'>Delete Crystal</Link>
-                        <br></br>
-                        <Link to="/crystalhome">Back to Crystal list</Link>
+                            }
+                                to='/crystalhome'>Delete Crystal</Link>
+                        </div>
+                        <div class="w-fit shadow inline-block bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
+                            <Link to="/crystalhome">Back to Crystal list</Link>
+                        </div>
                     </div >
                 ))
             }
             else {
                 setEditDeleteOptions(initialState.concat(
                     <div key='2'>
+                         <div class="w-fit shadow inline-block bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold m-4 py-2 px-4 rounded">
+                        
                         <Link to="/crystalhome">Back to Crystal list</Link>
+                        </div>
                     </div>
                 ))
             }
