@@ -14,7 +14,7 @@ export default function CrystalHome({ crystals, getCrystalbyID }) {
                         <div key={i} class="mb-4 w-1/3 h-2/3">
                             <div class="max-w-sm rounded overflow-hidden shadow-lg">
                                 <Link onClick={() => getCrystalbyID(crystal._id)} to={`/crystalhome/${crystal._id}`}>
-                                    <img src={crystal.image} alt="Crystals" width="90%"></img>
+                                    <img src={crystal.image} alt="Crystals"></img>
                                 </Link>
                                 <div class="px-6 py-4">
                                     <div class="font-bold text-xl mb-2">{crystal.name}</div>
