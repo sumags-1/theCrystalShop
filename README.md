@@ -160,3 +160,9 @@ https://new-beginnings-app.herokuapp.com/
 <img width="923" alt="Screen Shot 2023-01-22 at 10 47 56 PM" src="https://user-images.githubusercontent.com/115961145/213980464-ce33ce44-4f26-46fe-b0ab-401413d222c6.png">
 
 
+### References and Credits:
+1. New Moon Beginnings website - they are an actual online crystal shop and I was very inspired by their site. I also sourced some images and a lot of material about the actual crystals from their site (as regards why to use the crystal, what element, zodiac, chakra etc)
+2. TailwindCSS - learnt from the tailwind website and their examples to make cards, buttons, etc. There is a whole lot yet to be learnt and I have merely scratched the surface but it was a lot of fun learning a new CSS framework and applying it to my project. This cheatsheet is God !! https://tailwindcomponents.com/cheatsheet/ 
+3. Our cohort's past projects, homeworks and class material - I learnt a lot about React working on this project on my own but could not have done it without the classroom materials and past homeworks
+4. Last but definitely not the least - THANK YOU to the instructors ! Scott helped me out with many of my React questions and helped me understand authentication so much better. Matt and Justin helped me with the deployment when it was all falling around me on deployment day. While this is just the last 2 weeks, I am deeply grateful for all I have learnt from all three of you, thank you so much.
+
