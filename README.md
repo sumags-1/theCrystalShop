@@ -86,5 +86,43 @@ https://new-beginnings-app.herokuapp.com/
 <br>
 
 
-Wireframes: 
-Visitor view:
+### Wireframes: 
+**Visitor view:**<br>
+<img width="629" alt="Screen Shot 2023-01-10 at 12 37 13 PM" src="https://user-images.githubusercontent.com/115961145/213979258-f78fd617-fa71-4c52-9151-bb205747321a.png">
+
+**Admin view:**<br>
+<img width="611" alt="Screen Shot 2023-01-10 at 12 37 37 PM" src="https://user-images.githubusercontent.com/115961145/213979271-4a625894-f845-4814-b645-ff9209930a4f.png">
+
+<img width="619" alt="Screen Shot 2023-01-10 at 12 37 52 PM" src="https://user-images.githubusercontent.com/115961145/213979296-850d1773-2954-48cf-8270-c6b2daf4f3c8.png">
+<br><br>
+
+### Screenshots of app:
+**Home Page:**<br>
+<img width="918" alt="Screen Shot 2023-01-22 at 10 41 05 PM" src="https://user-images.githubusercontent.com/115961145/213979573-2c9194aa-3655-4fca-8299-7e27392b040a.png">
+
+
+**Visitor view (not logged in, browsing as guest):**<br>
+<img width="937" alt="Screen Shot 2023-01-22 at 10 42 09 PM" src="https://user-images.githubusercontent.com/115961145/213979695-2c6f0e64-6665-47c8-b4e6-d8439c8a2cc3.png">
+
+
+**Login page:**<br>
+<img width="927" alt="Screen Shot 2023-01-22 at 10 43 05 PM" src="https://user-images.githubusercontent.com/115961145/213979822-9e089c05-9b15-42be-8df0-a98d314dcf27.png">
+
+
+**Logged in user (customer with no access to change inventory):**<br>
+<img width="934" alt="Screen Shot 2023-01-22 at 10 44 01 PM" src="https://user-images.githubusercontent.com/115961145/213979956-e3d98750-c34d-45fb-b10b-f27317088790.png">
+
+
+**Logged in Admin user with access to Add, Edit and Delete inventory:**<br>
+<img width="930" alt="Screen Shot 2023-01-22 at 10 45 15 PM" src="https://user-images.githubusercontent.com/115961145/213980108-7e0496db-d49b-4be7-ab93-eeb4f336ec9d.png">
+<br>
+<img width="927" alt="Screen Shot 2023-01-22 at 10 46 17 PM" src="https://user-images.githubusercontent.com/115961145/213980242-718464ce-b5c6-48f7-aca9-1555ada6999f.png">
+<br>
+<img width="860" alt="Screen Shot 2023-01-22 at 10 46 45 PM" src="https://user-images.githubusercontent.com/115961145/213980304-c1072f55-b508-4f8c-8fc3-b37909670645.png">
+<br>
+<img width="920" alt="Screen Shot 2023-01-22 at 10 47 26 PM" src="https://user-images.githubusercontent.com/115961145/213980392-c4b02771-3e4a-4cf3-a087-1dd8cebeefed.png">
+<br>
+
+<img width="923" alt="Screen Shot 2023-01-22 at 10 47 56 PM" src="https://user-images.githubusercontent.com/115961145/213980464-ce33ce44-4f26-46fe-b0ab-401413d222c6.png">
+
+
