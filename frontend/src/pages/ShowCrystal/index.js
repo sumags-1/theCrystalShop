@@ -6,7 +6,7 @@ import { deleteCrystal } from "../../utils/api";
 import CreateReview from "../../components/CreateReview";
 
 
-export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
+export default function ShowCrystal({ shownCrystal, crystals, setCrystals, isLoggedIn }) {
 
     const initialState = []
     const [editDeleteOptions, setEditDeleteOptions] = useState(initialState)
@@ -21,14 +21,22 @@ export default function ShowCrystal({ shownCrystal, isLoggedIn }) {
                     <div key='1'>
                         <Link to={`/editcrystal/${shownCrystal._id}`}>Edit Crystal</Link>
                         <br></br>
-                        <Link onClick={() =>
+                        <Link onClick={() => {
                             deleteCrystal(shownCrystal._id)
-                            //use same as edit for renewing crystals page    
+                            const updatedArray = [...crystals] //updates list of crystals on Home page
+                            for (let i = 0; i < updatedArray.length; i++) {
+                                if (updatedArray[i]._id === shownCrystal._id) {
+                                    updatedArray.splice(i, 1)
+                                    // updatedArray[i] = formState
+                                }
+                            }
+                            setCrystals(updatedArray)
+                        }
                         }
                             to='/crystalhome'>Delete Crystal</Link>
                         <br></br>
                         <Link to="/crystalhome">Back to Crystal list</Link>
-                    </div>
+                    </div >
                 ))
             }
             else {

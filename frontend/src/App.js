@@ -87,12 +87,12 @@ function App() {
 
         <Route
           path='/crystalhome/addcrystal'
-          element={<AddCrystal crystals={crystals} isLoggedIn={isLoggedIn} />}
+          element={<AddCrystal crystals={crystals} setCrystals={setCrystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
           exact path='/crystalhome/:id'
-          element={<ShowCrystal shownCrystal={shownCrystal} crystals={crystals} isLoggedIn={isLoggedIn} />}
+          element={<ShowCrystal shownCrystal={shownCrystal} crystals={crystals} setCrystals={setCrystals} isLoggedIn={isLoggedIn} />}
         />
 
         <Route
