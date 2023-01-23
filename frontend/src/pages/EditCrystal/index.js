@@ -125,7 +125,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                     </div>
                     <div class="md:w-2/3">
                         <select id="surface" onChange={handleChange} value={formState.surface} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
-                            <option>Surface of crystal</option>
+                            <option>Surface/type of crystal</option>
                             <option value="Polished">Polished</option>
                             <option value="Raw">Raw</option>
                             <option value="Jewelry">Jewelry</option>
@@ -142,7 +142,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                     </div>
                     <div class="md:w-2/3">
                         <select id="chakra" onChange={handleChange} value={formState.chakra} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
-                            <option>Chakra that crystal affects</option>
+                            <option>Choose chakra affected</option>
                             <option value="Root">Root</option>
                             <option value="Sacral">Sacral</option>
                             <option value="Solar Plexus">Solar Plexus</option>
@@ -163,7 +163,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                     </div>
                     <div class="md:w-2/3">
                         <select id="zodiac" onChange={handleChange} value={formState.zodiac} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
-                            <option>Zodiac signs that crystal affects</option>
+                            <option>Choose the Zodiac sign</option>
                             <option value="All signs">All Signs</option>
                             <option value="Aries">Aries</option>
                             <option value="Taurus">Taurus</option>
@@ -190,7 +190,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                     </div>
                     <div class="md:w-2/3">
                         <select id="element" onChange={handleChange} value={formState.element} class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-fit py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-black">
-                            <option>Element that crystal belongs to</option>
+                            <option>Choose element affected</option>
                             <option value="Fire">Fire</option>
                             <option value="Earth">Earth</option>
                             <option value="Air">Air</option>

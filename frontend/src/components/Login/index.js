@@ -44,6 +44,7 @@ export default function Login(props) {
                     </div>
                     <div class="mx-auto mb-4 p-4 w-fit bg-gray-700 rounded text-center text-white">
                         <button class="w-16 border-black border-1 border-solid" onClick={handleSubmit}>Log In</button></div>
+                <br></br>
                 </form>
            </div>
     )
