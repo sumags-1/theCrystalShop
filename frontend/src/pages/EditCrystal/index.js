@@ -226,7 +226,6 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                 <div class="md:flex md:items-center">
                     <div class="mx-auto">
                         <input type="submit" class="shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
-                        EDIT CRYSTAL
                     </div>
                 </div>
 
