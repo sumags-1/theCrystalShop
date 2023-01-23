@@ -2,13 +2,21 @@
 
 ### NEW BEGINNINGS
 <b>Your one stop Crystal Shop</b>
-<br>
+<br><br>
 
 <b>Link to Github repo:</b>
 https://github.com/sumags-1/theCrystalShop
+<br>
 
 <b>Link to Live site deployed on Heroku:</b>
 https://new-beginnings-app.herokuapp.com/
+<br><br>
+
+<b>Technologies used:</b><br>
+<ul>
+	<li>The app was built using the MERN stack - MongoDB/Mongoose, Express, React and Node</li>
+	<li>The CSS framework used was Tailwind CSS </li>
+</ul>
 
 <br>
 <b>What does the site do ?</b>
@@ -24,6 +32,14 @@ https://new-beginnings-app.herokuapp.com/
 </ul>
 
 <br>
+
+<b>Installation instructions</b>:
+<ul>
+	<li>The app can be accessed from the live site link given above. </li>
+	<li>To run locally, clone the main branch, setup env file to point to mongodb, run npm i at the root level to install all dependencies and finally run npm start to start the application on localhost</li>
+</ul>
+<br>
+
 <b>Models</b>
 <ol>
 <li>User - username, password, admin (yes/no)</li>
@@ -44,7 +60,7 @@ https://new-beginnings-app.herokuapp.com/
 </ul>
 
 <br>
-<b>Stretch: Unable to achieve within the timeline</b>
+<b>Stretch: Unable to achieve in this iteration</b>
 <ul>
 <li>Visitors can save items to wishlist</li>
 <li>Visitors can Search for crystals by category or name</li>
