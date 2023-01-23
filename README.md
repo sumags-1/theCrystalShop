@@ -103,7 +103,6 @@ https://new-beginnings-app.herokuapp.com/
 
 
 ###Route Chart:###
-<b>ROUTES :</b> 
 
 | **URL**   | **HTTP Verb** | **REST Action** | **CRUD Action** |
 | --------- | ------------- | --------------- | --------------- |
@@ -114,6 +113,7 @@ https://new-beginnings-app.herokuapp.com/
 | /editcrystal/:id | GET      | edit            | read            |
 | /editcrystal/:id | PUT     | update          | update          |
 | /crystalhome/:id | DELETE        | destroy         | delete          |
+| /crystalhome/:id/review | POST           | create            | create            |
 | /user/login    | GET           | index           | read            |
 | /user/signup     | POST          | create          | create          |
 
