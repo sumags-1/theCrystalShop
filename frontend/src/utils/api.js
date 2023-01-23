@@ -14,19 +14,6 @@ export async function loginToAccount(formData) {
     return data
 }
 
-// // get user
-
-// export async function getUserName() {
-//     const config = {
-//         headers:{
-//             'Authorization': localStorage.getItem('token')
-//         }
-//     }
-//     const userD = await axios.get("user", config)
-//     // console.log(userD.data)
-//     return userD.data
-// }
-
 //crystalhome index route
 export async function getIndexRoute() {
     const { data } = await axios.get(`${urlvar}/crystal`)

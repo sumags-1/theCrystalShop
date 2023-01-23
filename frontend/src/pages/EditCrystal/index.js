@@ -38,7 +38,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
     }
 
     return (
-        <div class="parent w-full">
+        <div class="parent w-full mt-10 mb-10">
 
             <form class="child mx-auto text-center" onSubmit={handleSubmit}>
                 <h2 class="font-semibold text-2xl tracking-wide">EDIT CRYSTAL INFORMATION</h2><br></br>
@@ -228,7 +228,7 @@ function EditCrystal({ shownCrystal, setShownCrystal, crystals, setCrystals }) {
                         <input type="submit" class="shadow bg-slate-700 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
                     </div>
                 </div>
-
+                <br></br>
             </form>
         </div>
     )
