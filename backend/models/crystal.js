@@ -17,7 +17,7 @@ const crystalSchema = new Schema(
         zodiac: { type: String, enum: ['All signs', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'] },
         element: { type: String, enum: ['Fire', 'Earth', 'Air', 'Water'] },
         price: { type: String },
-        image: { type: String, default: '/assets/nb_logo.png' },
+        image: { type: String, default: '/assets/new-beginnings-logo.png' },
         reviews: [reviewSchema]
     }
 )
