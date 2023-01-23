@@ -102,7 +102,7 @@ https://new-beginnings-app.herokuapp.com/
 <br>
 
 
-###Route Chart:###
+**Route Chart:**
 
 | **URL**   | **HTTP Verb** | **REST Action** | **CRUD Action** |
 | --------- | ------------- | --------------- | --------------- |
@@ -118,7 +118,7 @@ https://new-beginnings-app.herokuapp.com/
 | /user/signup     | POST          | create          | create          |
 
 
-
+<br>
 
 ### Wireframes: 
 **Visitor view:**<br>
