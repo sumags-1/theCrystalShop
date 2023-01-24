@@ -11,11 +11,14 @@ function AddCrystal({ crystals, setCrystals }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        createCrystal(formState);
-        const updatedArray = [...crystals] //updates list of crystals on Home page
-        updatedArray.push(formState)
-        setCrystals(updatedArray)
-        navigate('/crystalhome');
+        createCrystal(formState)
+            .then(data => {
+                const updatedArray = [...crystals] //updates list of crystals on Home page
+                updatedArray.push(data)
+                setCrystals(updatedArray)
+                navigate('/crystalhome')
+            })
+
     }
 
     const handleChange = (event) => {
@@ -215,7 +218,7 @@ function AddCrystal({ crystals, setCrystals }) {
                 </div>
                 <br></br>
             </form>
-            
+
         </div>
 
     )
